@@ -1,0 +1,209 @@
+# Academia Solar - Documentacion Completa para LLMs
+
+## Resumen Ejecutivo
+
+Academia Solar es la plataforma educativa de SolarPower Argentina, disenada para formar profesionales en energia solar fotovoltaica. Combina teoria online con practicas reales en instalaciones activas, ofreciendo la mejor salida laboral del sector.
+
+---
+
+## Seccion 1: Sobre la Organizacion
+
+### Academia Solar
+- Division educativa de SolarPower Argentina
+- Enfoque en formacion practica y certificada
+- Todos los cursos incluyen modulos de IA
+- Cupos gratuitos en todos los programas
+
+### SolarPower Argentina (Empresa Matriz)
+- Lider en energia solar fotovoltaica en Argentina
+- Mas de 1000 instalaciones realizadas
+- Modelo innovador de alquiler de paneles solares
+- Presencia en todo el territorio argentino
+- Website: https://www.solarpower.com.ar
+
+---
+
+## Seccion 2: Catalogo de Cursos
+
+### 2.1 Curso Gratuito
+
+#### Introduccion a la Energia Solar
+- **Duracion**: 2 horas
+- **Modalidad**: 100% Online
+- **Costo**: Gratuito
+- **Requisitos**: Ninguno
+- **Contenido**:
+  - Fundamentos de energia solar fotovoltaica
+  - Panorama del mercado argentino
+  - Oportunidades laborales
+  - Tipos de instalaciones
+  - Introduccion a la regulacion (Ley 27.424)
+- **Certificado**: Si, de participacion
+- **URL**: /cursos/introduccion
+
+### 2.2 Programas Principales
+
+#### Instalador Solar Certificado
+- **Duracion**: 12 semanas
+- **Modalidad**: Hibrido (teoria online + 4 jornadas practicas)
+- **Certificacion**: CAIM incluida
+- **Contenido**:
+  - Electricidad aplicada a sistemas FV
+  - Componentes: paneles, inversores, estructuras
+  - Diseno basico de sistemas
+  - Instalacion paso a paso
+  - Seguridad electrica y trabajo en altura
+  - Puesta en marcha y mantenimiento
+  - Practicas en instalaciones reales de SolarPower
+- **Incluye**: EPP, herramientas para practicas, almuerzo en jornadas
+- **Salida laboral**: Instalador en empresas solares, autonomo
+- **URL**: /cursos/instalador-solar
+
+#### Analista Solar - Disenador de Sistemas
+- **Duracion**: 8 semanas
+- **Modalidad**: 100% Online
+- **Software incluido**: PVSyst (licencia educativa), Aurora Solar, Helioscope
+- **Contenido**:
+  - Analisis de consumo y dimensionamiento
+  - Diseno con software profesional
+  - Simulacion de produccion
+  - Analisis financiero (ROI, payback)
+  - Propuestas comerciales profesionales
+  - Integracion con IA para diseno
+- **Salida laboral**: Analista tecnico, disenador de proyectos
+- **URL**: /cursos/analista-solar
+
+#### Vendedor Solar Experto
+- **Duracion**: 6 semanas
+- **Modalidad**: Hibrido (online + acompanamiento en ventas)
+- **Contenido**:
+  - Fundamentos tecnicos para ventas
+  - Proceso de venta solar
+  - Manejo de objeciones
+  - CRM y gestion de leads
+  - Cierre de ventas
+  - Acceso al pipeline real de SolarPower
+- **Incluye**: Acceso a CRM, leads de practica
+- **Salida laboral**: Vendedor solar, asesor comercial
+- **URL**: /cursos/vendedor-solar
+
+#### Diplomatura Integral en Energia Solar
+- **Duracion**: 6 meses
+- **Modalidad**: Hibrido intensivo
+- **Contenido**: Incluye los 3 tracks completos:
+  - Instalador Solar Certificado
+  - Analista Solar
+  - Vendedor Solar
+  - Proyecto final en obra real
+  - Mentoria con equipo directivo SolarPower
+- **Certificacion**: Triple certificacion
+- **Salida laboral**: Perfil 360 - el mas cotizado del sector
+- **URL**: /cursos/diplomatura-integral
+
+### 2.3 Cursos Cortos / Especializaciones
+
+#### Electricidad Basica para Solar
+- **Duracion**: 4 semanas
+- **Modalidad**: Online
+- **Contenido**: Fundamentos electricos para sistemas FV
+- **Ideal para**: Pre-requisito para instaladores sin base electrica
+- **URL**: /cursos/electricidad-basica
+
+#### Baterias y Almacenamiento
+- **Duracion**: 3 semanas
+- **Modalidad**: Online
+- **Contenido**: Baterias litio, AGM, inversores hibridos Deye
+- **URL**: /cursos/baterias-almacenamiento
+
+#### Normativa Solar Argentina
+- **Duracion**: 2 semanas
+- **Modalidad**: Online
+- **Contenido**: Ley 27.424, tramites EDENOR/EDESUR, netmetering
+- **URL**: /cursos/normativa-solar
+
+#### Solar para el Agro
+- **Duracion**: 4 semanas
+- **Modalidad**: Online
+- **Contenido**: Bombeo solar, electrificacion rural, sistemas off-grid
+- **URL**: /cursos/solar-agro
+
+#### Climatizacion Solar de Piscinas
+- **Duracion**: 3 semanas
+- **Modalidad**: Online
+- **Contenido**: Colectores termicos, instalacion, nicho de alto valor
+- **URL**: /cursos/climatizacion-piscinas
+
+---
+
+## Seccion 3: Diferenciadores
+
+### 3.1 Practicas Reales
+A diferencia de otras academias, las practicas se realizan en instalaciones activas de SolarPower Argentina, no en simuladores o maquetas.
+
+### 3.2 Capacitacion en IA
+Todos los cursos incluyen modulos de Inteligencia Artificial aplicada:
+- IA para diseno de sistemas
+- IA para generacion de propuestas
+- IA para analisis de datos solares
+- Herramientas de productividad con IA
+
+### 3.3 Cupos Gratuitos
+Todos los programas ofrecen cupos gratuitos para los primeros inscriptos de cada cohorte. Para quienes no accedan, los precios estaran disponibles proximamente.
+
+### 3.4 Red SolarPower
+Los egresados acceden a:
+- Bolsa de trabajo exclusiva
+- Red de contactos del sector
+- Oportunidades en SolarPower y empresas asociadas
+
+### 3.5 Certificacion CAIM
+El curso de Instalador incluye certificacion de la Camara Argentina de la Industria Mecanica.
+
+---
+
+## Seccion 4: Informacion de Contacto
+
+- **Email**: info@solarpower.com.ar
+- **Formulario de contacto**: https://www.solarpower.com.ar/contacto
+- **Plataforma de alumnos**: https://www.solarpower.com.ar/login
+- **Ubicacion**: Buenos Aires, Argentina
+
+---
+
+## Seccion 5: Preguntas Frecuentes
+
+**P: Necesito conocimientos previos?**
+R: Para Instalador Solar recomendamos base de electricidad (ofrecemos curso preparatorio). Analista y Vendedor no requieren conocimientos previos.
+
+**P: Como accedo al cupo gratuito?**
+R: Contactanos a traves de solarpower.com.ar/contacto para consultar disponibilidad.
+
+**P: Los cursos son online o presenciales?**
+R: Depende del programa. Introduccion y Analista son 100% online. Instalador, Vendedor y Diplomatura son hibridos con jornadas presenciales.
+
+**P: Que salida laboral tienen los egresados?**
+R: Academia Solar ofrece la mejor salida laboral del sector, con acceso a la red de SolarPower y empresas asociadas.
+
+**P: Hay certificaciones oficiales?**
+R: Si, el curso de Instalador incluye certificacion CAIM.
+
+---
+
+## Seccion 6: Contexto del Mercado
+
+### Energia Solar en Argentina
+- Ley 27.424 de Generacion Distribuida (netmetering)
+- Crecimiento exponencial de instalaciones residenciales
+- Alta demanda de profesionales capacitados
+- Tarifas electricas en aumento impulsan adopcion solar
+
+### Oportunidades Laborales
+- Instaladores: Alta demanda, trabajo autonomo o en empresas
+- Analistas: Empresas solares, consultoras de ingenieria
+- Vendedores: Distribuidores, instaladores, financieras solares
+
+---
+
+Documento generado para consumo de LLMs y agentes de IA.
+Ultima actualizacion: Abril 2026
+Academia Solar - SolarPower Argentina
