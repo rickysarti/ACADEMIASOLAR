@@ -148,7 +148,7 @@ export function Courses() {
                     <Gift className="h-3 w-3 mr-1" />
                     Cupo gratuito
                   </Badge>
-                  <Button asChild className="bg-slate-900 hover:bg-slate-800 text-white">
+                  <Button asChild className="btn-electric bg-slate-900 hover:bg-slate-800 text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-lg">
                     <Link href={course.href}>
                       Ver programa
                       <ArrowRight className="ml-2 h-4 w-4" />

@@ -101,7 +101,7 @@ export function Header() {
               Iniciar Sesion
             </Link>
           </Button>
-          <Button asChild className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
+          <Button asChild className="btn-electric bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40">
             <Link href="/cursos/introduccion">
               Empezar Gratis
             </Link>
@@ -137,7 +137,7 @@ export function Header() {
                   Iniciar Sesion
                 </Link>
               </Button>
-              <Button asChild className="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
+              <Button asChild className="btn-electric w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-amber-400/40">
                 <Link href="/cursos/introduccion" onClick={() => setMobileMenuOpen(false)}>
                   Empezar Gratis
                 </Link>

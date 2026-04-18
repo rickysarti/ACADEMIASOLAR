@@ -109,7 +109,7 @@ export function CoursePage({
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" asChild className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
+                <Button size="lg" asChild className="btn-electric bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40">
                   <Link href="https://www.solarpower.com.ar/contacto" target="_blank" rel="noopener noreferrer">
                     {isFree ? "Empezar ahora" : "Consultar cupo gratuito"}
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -238,13 +238,13 @@ export function CoursePage({
               : "Todos nuestros programas tienen cupos gratuitos disponibles. Consulta si podes acceder."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
+            <Button size="lg" asChild className="btn-electric bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-amber-400/50">
               <Link href="https://www.solarpower.com.ar/contacto" target="_blank" rel="noopener noreferrer">
                 {isFree ? "Empezar gratis" : "Solicitar cupo gratuito"}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" asChild className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/30">
+            <Button size="lg" asChild className="btn-electric-ghost bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/30 transition-all duration-200 hover:scale-[1.02]">
               <Link href="/#cursos">
                 Ver otros cursos
               </Link>

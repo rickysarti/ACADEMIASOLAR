@@ -68,7 +68,7 @@ export function WhyChoose() {
               </div>
             </div>
 
-            <Button size="lg" asChild className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
+            <Button size="lg" asChild className="btn-electric bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40">
               <Link href="#cursos">
                 Ver programas disponibles
                 <ArrowRight className="ml-2 h-5 w-5" />

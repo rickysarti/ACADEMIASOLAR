@@ -35,7 +35,7 @@ export function CTA() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-900 font-semibold rounded-full"
+                className="btn-electric bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-900 font-semibold rounded-full shadow-lg shadow-amber-500/30 transition-all duration-200 hover:scale-[1.03] hover:shadow-amber-400/50"
                 asChild
               >
                 <Link href="/cursos/introduccion">
@@ -45,7 +45,7 @@ export function CTA() {
               </Button>
               <Button 
                 size="lg" 
-                className="bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/30 font-semibold rounded-full"
+                className="btn-electric-ghost bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/30 font-semibold rounded-full transition-all duration-200 hover:scale-[1.03]"
                 asChild
               >
                 <Link href="https://www.solarpower.com.ar/contacto" target="_blank" rel="noopener noreferrer">

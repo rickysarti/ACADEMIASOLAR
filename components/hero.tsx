@@ -75,7 +75,7 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-900 font-semibold text-lg px-8 py-6 rounded-full shadow-2xl shadow-amber-500/25"
+            className="btn-electric bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-900 font-semibold text-lg px-8 py-6 rounded-full shadow-2xl shadow-amber-500/40 transition-all duration-200 hover:scale-[1.03] hover:shadow-amber-400/60"
             asChild
           >
             <Link href="/cursos/introduccion">
@@ -85,7 +85,7 @@ export function Hero() {
           </Button>
           <Button 
             size="lg" 
-            className="bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/30 font-semibold text-lg px-8 py-6 rounded-full"
+            className="btn-electric-ghost bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/30 font-semibold text-lg px-8 py-6 rounded-full transition-all duration-200 hover:scale-[1.03]"
             asChild
           >
             <Link href="#cursos">
