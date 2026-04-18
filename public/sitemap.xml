@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Home -->
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Cursos Principales -->
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/introduccion</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/instalador-solar</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/course-installer.jpg</image:loc>
+      <image:title>Curso Instalador Solar</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/analista-solar</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/course-analyst.jpg</image:loc>
+      <image:title>Curso Analista Solar</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/vendedor-solar</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/course-sales.jpg</image:loc>
+      <image:title>Curso Vendedor Solar</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/diplomatura-integral</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/course-diploma.jpg</image:loc>
+      <image:title>Diplomatura Integral en Energia Solar</image:title>
+    </image:image>
+  </url>
+
+  <!-- Cursos Cortos -->
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/electricidad-basica</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/baterias-almacenamiento</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/normativa-solar</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/solar-agro</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/climatizacion-piscinas</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

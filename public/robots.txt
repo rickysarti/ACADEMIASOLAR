@@ -1,0 +1,20 @@
+# Robots.txt para Academia Solar
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.next/
+Disallow: /private/
+
+# Específico para Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Específico para Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://academiasolar.solarpower.com.ar/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
