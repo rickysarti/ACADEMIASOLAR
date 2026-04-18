@@ -1,99 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
   <!-- Home -->
   <url>
     <loc>https://academiasolar.solarpower.com.ar/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/hero-solar-installation.jpg</image:loc>
+      <image:title>Academia Solar - Formacion en Energia Solar</image:title>
+      <image:caption>Cursos profesionales de energia solar con practicas reales en Argentina</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Archivos para LLMs / IA -->
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/llms.txt</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/llms-full.txt</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/AGENTS.md</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/README.md</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Curso Gratuito -->
+  <url>
+    <loc>https://academiasolar.solarpower.com.ar/cursos/introduccion</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/hero-solar-installation.jpg</image:loc>
+      <image:title>Curso Gratuito Introduccion a la Energia Solar</image:title>
+      <image:caption>Curso gratis de 2 horas para empezar en energia solar</image:caption>
+    </image:image>
   </url>
 
   <!-- Cursos Principales -->
   <url>
-    <loc>https://academiasolar.solarpower.com.ar/cursos/introduccion</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/instalador-solar</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://academiasolar.solarpower.com.ar/images/course-installer.jpg</image:loc>
-      <image:title>Curso Instalador Solar</image:title>
+      <image:title>Curso Instalador Solar Certificado Argentina</image:title>
+      <image:caption>12 semanas de formacion con certificacion CAIM incluida</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/analista-solar</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://academiasolar.solarpower.com.ar/images/course-analyst.jpg</image:loc>
-      <image:title>Curso Analista Solar</image:title>
+      <image:title>Curso Analista y Disenador Solar</image:title>
+      <image:caption>8 semanas online con PVSyst, Aurora Solar y Helioscope</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/vendedor-solar</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://academiasolar.solarpower.com.ar/images/course-sales.jpg</image:loc>
-      <image:title>Curso Vendedor Solar</image:title>
+      <image:title>Curso Vendedor Solar Experto</image:title>
+      <image:caption>6 semanas con acceso al pipeline real de SolarPower</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/diplomatura-integral</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://academiasolar.solarpower.com.ar/images/course-diploma.jpg</image:loc>
       <image:title>Diplomatura Integral en Energia Solar</image:title>
+      <image:caption>6 meses de formacion 360 - el perfil mas cotizado del sector</image:caption>
     </image:image>
   </url>
 
-  <!-- Cursos Cortos -->
+  <!-- Cursos Cortos / Especializaciones -->
   <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/electricidad-basica</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/course-installer.jpg</image:loc>
+      <image:title>Curso Electricidad Basica para Solar</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/baterias-almacenamiento</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/course-installer.jpg</image:loc>
+      <image:title>Curso Baterias y Almacenamiento Solar</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/normativa-solar</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/course-analyst.jpg</image:loc>
+      <image:title>Curso Normativa Solar Argentina - Ley 27.424</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/solar-agro</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/hero-solar-installation.jpg</image:loc>
+      <image:title>Curso Energia Solar para el Agro</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://academiasolar.solarpower.com.ar/cursos/climatizacion-piscinas</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://academiasolar.solarpower.com.ar/images/course-installer.jpg</image:loc>
+      <image:title>Curso Climatizacion Solar de Piscinas</image:title>
+    </image:image>
   </url>
+
 </urlset>

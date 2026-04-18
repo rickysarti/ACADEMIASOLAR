@@ -1,20 +1,74 @@
 # Robots.txt para Academia Solar
+# https://academiasolar.solarpower.com.ar
+
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /.next/
 Disallow: /private/
 
-# Específico para Googlebot
+# Especifico para Googlebot
 User-agent: Googlebot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /AGENTS.md
+Allow: /README.md
 
-# Específico para Bingbot
+# Especifico para Bingbot
 User-agent: Bingbot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
-# Sitemap location
+# Agentes de IA / LLMs
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /AGENTS.md
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /AGENTS.md
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Anthropic-AI
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /AGENTS.md
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /AGENTS.md
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Cohere-AI
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Sitemap y archivos para LLMs
 Sitemap: https://academiasolar.solarpower.com.ar/sitemap.xml
+
+# Archivos especiales para IA
+# LLMs.txt: https://academiasolar.solarpower.com.ar/llms.txt
+# LLMs-Full: https://academiasolar.solarpower.com.ar/llms-full.txt
+# Agents: https://academiasolar.solarpower.com.ar/AGENTS.md
+# README: https://academiasolar.solarpower.com.ar/README.md
 
 # Crawl delay
 Crawl-delay: 1

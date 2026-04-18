@@ -1,0 +1,110 @@
+# Academia Solar - SolarPower Argentina
+
+> Formacion profesional en energia solar con practicas reales y la mejor salida laboral de Argentina.
+
+Academia Solar es la division educativa de SolarPower Argentina, empresa lider en energia solar fotovoltaica. Ofrecemos cursos certificados con practicas en instalaciones reales y acceso directo al mercado laboral.
+
+## Informacion General
+
+- Sitio web: https://academiasolar.solarpower.com.ar
+- Empresa matriz: SolarPower Argentina (https://www.solarpower.com.ar)
+- Ubicacion: Buenos Aires, Argentina
+- Contacto: info@solarpower.com.ar
+- Industria: Educacion en Energia Solar / Energias Renovables
+
+## Propuesta de Valor
+
+- Practicas reales en instalaciones de SolarPower Argentina
+- Cupos gratuitos disponibles en todos los cursos
+- Capacitacion en Inteligencia Artificial aplicada al sector solar
+- La mejor salida laboral del mercado solar argentino
+- Certificaciones reconocidas (CAIM para instaladores)
+
+## Programas de Formacion
+
+### Cursos Principales
+
+1. **Introduccion a la Energia Solar** (Gratuito)
+   - Duracion: 2 horas
+   - Modalidad: 100% Online
+   - URL: /cursos/introduccion
+   - Ideal para: Principiantes que quieren conocer el sector
+
+2. **Instalador Solar Certificado**
+   - Duracion: 12 semanas
+   - Modalidad: Hibrido (online + practicas presenciales)
+   - Certificacion: CAIM incluida
+   - URL: /cursos/instalador-solar
+   - Incluye: Practicas en obra real, herramientas, EPP
+
+3. **Analista Solar - Disenador de Sistemas**
+   - Duracion: 8 semanas
+   - Modalidad: 100% Online
+   - Software: PVSyst, Aurora Solar, Helioscope
+   - URL: /cursos/analista-solar
+   - Incluye: Licencia educativa PVSyst
+
+4. **Vendedor Solar Experto**
+   - Duracion: 6 semanas
+   - Modalidad: Hibrido
+   - URL: /cursos/vendedor-solar
+   - Incluye: Acceso a CRM y pipeline real de SolarPower
+
+5. **Diplomatura Integral en Energia Solar**
+   - Duracion: 6 meses
+   - Modalidad: Hibrido
+   - URL: /cursos/diplomatura-integral
+   - Incluye: Los 3 tracks completos + proyecto final en obra real
+
+### Cursos Cortos / Especializaciones
+
+- Electricidad Basica para Solar (4 semanas) - /cursos/electricidad-basica
+- Baterias y Almacenamiento (3 semanas) - /cursos/baterias-almacenamiento
+- Normativa Solar Argentina (2 semanas) - /cursos/normativa-solar
+- Solar para el Agro (4 semanas) - /cursos/solar-agro
+- Climatizacion Solar de Piscinas (3 semanas) - /cursos/climatizacion-piscinas
+
+## Diferenciadores Clave
+
+1. **Practicas Reales**: Todas las practicas se realizan en instalaciones activas de SolarPower
+2. **IA Incluida**: Todos los cursos incluyen modulos de Inteligencia Artificial para el sector
+3. **Red SolarPower**: Acceso a la red de profesionales y empresas del grupo
+4. **Cupos Gratuitos**: Todos los programas ofrecen cupos gratuitos para los primeros inscriptos
+5. **Certificacion CAIM**: El curso de instalador incluye certificacion oficial
+
+## Publico Objetivo
+
+- Personas que buscan reconversion laboral hacia energias renovables
+- Electricistas que quieren especializarse en solar
+- Profesionales del sector que buscan actualizacion
+- Empresas que necesitan capacitar equipos (programas B2B)
+- Jovenes que inician carrera en energia limpia
+
+## Enlaces Importantes
+
+- Pagina principal: /
+- Todos los cursos: /#cursos
+- Preguntas frecuentes: /#faq
+- Contacto: https://www.solarpower.com.ar/contacto
+- Plataforma de alumnos: https://www.solarpower.com.ar/login
+
+## Sobre SolarPower Argentina
+
+SolarPower es la empresa lider en energia solar de Argentina. Ofrece:
+- Instalacion de paneles solares para hogares y empresas
+- Sistema de alquiler de paneles (modelo unico en LATAM)
+- Soluciones para el agro y sector industrial
+- Mas de 1000 instalaciones realizadas
+
+Sitio web: https://www.solarpower.com.ar
+
+## Contexto del Mercado Argentino
+
+- Ley 27.424 de Generacion Distribuida permite netmetering
+- Crecimiento exponencial del sector solar en Argentina
+- Alta demanda de profesionales capacitados
+- Academia Solar forma a los profesionales que el mercado necesita
+
+---
+
+Ultima actualizacion: Abril 2026
