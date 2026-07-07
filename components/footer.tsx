@@ -13,7 +13,7 @@ const footerLinks = {
     { label: "Sobre SolarPower", href: "https://www.solarpower.com.ar/solarpower", external: true },
     { label: "Nuestros Valores", href: "https://www.solarpower.com.ar/solarpower/nuestros-valores", external: true },
     { label: "Mapa de Instalaciones", href: "https://www.solarpower.com.ar/mapa-instalaciones", external: true },
-    { label: "Blog", href: "https://www.solarpower.com.ar/solarpower/blog", external: true },
+    { label: "Blog", href: "/blog" },
     { label: "Sos Instalador?", href: "https://www.solarpower.com.ar/solarpower/sos-instalador", external: true },
   ],
   recursos: [
