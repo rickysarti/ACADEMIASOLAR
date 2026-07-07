@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://academiasolar.solarpower.com.ar'),
   alternates: {
     canonical: '/',
+    types: {
+      'application/rss+xml': '/blog/rss.xml',
+    },
   },
   openGraph: {
     title: 'Academia Solar | Cursos de Energia Solar en Argentina',
