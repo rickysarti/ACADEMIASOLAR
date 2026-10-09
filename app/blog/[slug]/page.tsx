@@ -23,8 +23,10 @@ import {
 } from "@/lib/blog"
 import { JsonLd } from "@/components/json-ld"
 
-// Revalida esta pagina como maximo cada hora (ISR) para reflejar posts nuevos sin rebuild.
-export const revalidate = 3600
+// El editor del blog está en otro proyecto y no invalida este sitio al guardar.
+// Seis horas reducen regeneraciones sin demorar un día los cambios de artículos.
+// El listado y el feed mantienen su actualización horaria para descubrir posts nuevos.
+export const revalidate = 21600
 export const dynamicParams = true
 
 const SITE_URL = "https://academiasolar.solarpower.com.ar"
