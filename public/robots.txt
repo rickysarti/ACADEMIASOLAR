@@ -1,5 +1,5 @@
 # Robots.txt para Academia Solar
-# https://academiasolar.solarpower.com.ar
+# https://www.academiasolar.com.ar
 
 User-agent: *
 Allow: /
@@ -62,13 +62,13 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 
 # Sitemap y archivos para LLMs
-Sitemap: https://academiasolar.solarpower.com.ar/sitemap.xml
+Sitemap: https://www.academiasolar.com.ar/sitemap.xml
 
 # Archivos especiales para IA
-# LLMs.txt: https://academiasolar.solarpower.com.ar/llms.txt
-# LLMs-Full: https://academiasolar.solarpower.com.ar/llms-full.txt
-# Agents: https://academiasolar.solarpower.com.ar/AGENTS.md
-# README: https://academiasolar.solarpower.com.ar/README.md
+# LLMs.txt: https://www.academiasolar.com.ar/llms.txt
+# LLMs-Full: https://www.academiasolar.com.ar/llms-full.txt
+# Agents: https://www.academiasolar.com.ar/AGENTS.md
+# README: https://www.academiasolar.com.ar/README.md
 
 # Crawl delay
 Crawl-delay: 1

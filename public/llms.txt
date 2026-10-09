@@ -6,7 +6,7 @@ Academia Solar es la division educativa de SolarPower Argentina, empresa lider e
 
 ## Informacion General
 
-- Sitio web: https://academiasolar.solarpower.com.ar
+- Sitio web: https://www.academiasolar.com.ar
 - Empresa matriz: SolarPower Argentina (https://www.solarpower.com.ar)
 - Ubicacion: Buenos Aires, Argentina
 - Contacto: info@solarpower.com.ar

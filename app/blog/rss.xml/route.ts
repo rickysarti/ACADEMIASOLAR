@@ -3,7 +3,7 @@ import { getPublishedPosts } from "@/lib/blog"
 // Revalida este feed como maximo cada hora (ISR) para reflejar posts nuevos sin rebuild.
 export const revalidate = 3600
 
-const SITE_URL = "https://academiasolar.solarpower.com.ar"
+const SITE_URL = "https://www.academiasolar.com.ar"
 
 function escapeXml(value: string) {
   return value

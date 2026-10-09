@@ -42,7 +42,7 @@ Este sitio esta construido con:
 
 ## Enlaces
 
-- [Sitio Web](https://academiasolar.solarpower.com.ar)
+- [Sitio Web](https://www.academiasolar.com.ar)
 - [SolarPower Argentina](https://www.solarpower.com.ar)
 - [Contacto](https://www.solarpower.com.ar/contacto)
 

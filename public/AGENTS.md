@@ -64,7 +64,7 @@ El curso de Instalador Solar incluye certificacion CAIM (Camara Argentina de la 
 
 ## URLs de Referencia
 
-- Sitio Academia Solar: https://academiasolar.solarpower.com.ar
+- Sitio Academia Solar: https://www.academiasolar.com.ar
 - Sitio SolarPower: https://www.solarpower.com.ar
 - Contacto: https://www.solarpower.com.ar/contacto
 - Email: info@solarpower.com.ar

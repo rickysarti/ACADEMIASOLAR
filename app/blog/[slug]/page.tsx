@@ -29,7 +29,7 @@ import { JsonLd } from "@/components/json-ld"
 export const revalidate = 21600
 export const dynamicParams = true
 
-const SITE_URL = "https://academiasolar.solarpower.com.ar"
+const SITE_URL = "https://www.academiasolar.com.ar"
 
 export async function generateStaticParams() {
   const posts = await getPublishedPostSlugs()

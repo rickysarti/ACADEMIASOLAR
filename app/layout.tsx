@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'SolarPower Argentina', url: 'https://www.solarpower.com.ar' }],
   creator: 'SolarPower Argentina',
   publisher: 'Academia Solar',
-  metadataBase: new URL('https://academiasolar.solarpower.com.ar'),
+  metadataBase: new URL('https://www.academiasolar.com.ar'),
   alternates: {
     canonical: '/',
     types: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Academia Solar | Cursos de Energia Solar en Argentina',
     description: 'Formacion profesional en energia solar con practicas reales y la mejor salida laboral. Cupos gratuitos disponibles.',
-    url: 'https://academiasolar.solarpower.com.ar',
+    url: 'https://www.academiasolar.com.ar',
     siteName: 'Academia Solar - SolarPower Argentina',
     locale: 'es_AR',
     type: 'website',

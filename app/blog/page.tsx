@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Blog de Energia Solar Argentina | Academia Solar",
     description:
       "Guias, precios y noticias sobre energia solar en Argentina: paneles solares, inversores, baterias, financiacion y casos reales de instalaciones.",
-    url: "https://academiasolar.solarpower.com.ar/blog",
+    url: "https://www.academiasolar.com.ar/blog",
     type: "website",
   },
 }
@@ -34,18 +34,18 @@ export default async function BlogPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Blog de Energia Solar Argentina",
-    url: "https://academiasolar.solarpower.com.ar/blog",
+    url: "https://www.academiasolar.com.ar/blog",
     isPartOf: {
       "@type": "WebSite",
       name: "Academia Solar",
-      url: "https://academiasolar.solarpower.com.ar",
+      url: "https://www.academiasolar.com.ar",
     },
     mainEntity: {
       "@type": "ItemList",
       itemListElement: posts.map((post, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://academiasolar.solarpower.com.ar/blog/${post.slug}`,
+        url: `https://www.academiasolar.com.ar/blog/${post.slug}`,
         name: post.titulo,
       })),
     },
