@@ -12,7 +12,7 @@ import {
   Cpu,
   Gift,
   FlaskConical,
-  MessageCircle,
+  Mail,
   PlayCircle,
   Users,
 } from "lucide-react"
@@ -21,7 +21,7 @@ import { Eyebrow } from "@/components/brand/section"
 import { LogoMark } from "@/components/brand/logo"
 import { JsonLd } from "@/components/json-ld"
 import { MobileCtaBar } from "@/components/mobile-cta-bar"
-import { CONTACT_URL, SITE_URL, mainCourses, shortCourses, whatsappUrl } from "@/lib/site"
+import { CONTACT_EMAIL, SITE_URL, contactUrl, mainCourses, shortCourses } from "@/lib/site"
 
 interface Module {
   title: string
@@ -71,7 +71,8 @@ export function CoursePage({
 }: CoursePageProps) {
   const href = `/cursos/${slug}`
   const ctaLabel = isFree ? "Empezar ahora" : "Consultar cupo gratuito"
-  const whatsappMessage = `¡Hola! Quiero información sobre el curso "${title}" de Academia Solar.`
+  const consultaHref = contactUrl(slug)
+  const emailHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Consulta: ${title}`)}`
   const totalLessons = modules.reduce((sum, module) => sum + module.lessons.length, 0)
   const otherCourses = [...mainCourses, shortCourses[0]].filter((course) => course.href !== href).slice(0, 3)
 
@@ -133,15 +134,15 @@ export function CoursePage({
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild variant="sol" size="xl">
-                <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
+                <Link href={consultaHref}>
                   {ctaLabel}
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild variant="glass" size="xl">
-                <Link href={whatsappUrl(whatsappMessage)} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5" />
-                  Consultar por WhatsApp
+                <Link href={emailHref}>
+                  <Mail className="h-5 w-5" />
+                  Escribinos un email
                 </Link>
               </Button>
             </div>
@@ -248,7 +249,7 @@ export function CoursePage({
                 <p className="mt-2 leading-relaxed text-ink-700">{longDescription}</p>
               </div>
               <Button asChild variant="sol" size="xl" className="mt-6 hidden w-full lg:inline-flex">
-                <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
+                <Link href={consultaHref}>
                   {ctaLabel}
                   <ArrowRight className="h-5 w-5" />
                 </Link>
@@ -358,7 +359,7 @@ export function CoursePage({
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild variant="sol" size="xl">
-                <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
+                <Link href={consultaHref}>
                   {isFree ? "Empezar gratis" : "Solicitar cupo gratuito"}
                   <ArrowRight className="h-5 w-5" />
                 </Link>
@@ -371,7 +372,7 @@ export function CoursePage({
         </div>
       </section>
 
-      <MobileCtaBar label={ctaLabel} href={CONTACT_URL} external whatsappMessage={whatsappMessage} />
+      <MobileCtaBar label={ctaLabel} href={consultaHref} contactHref={consultaHref} />
     </div>
   )
 }

@@ -2,24 +2,24 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { ArrowRight, MessageCircle } from "lucide-react"
-import { whatsappUrl } from "@/lib/site"
+import { ArrowRight, Mail } from "lucide-react"
+import { CONTACT_URL } from "@/lib/site"
 
 interface MobileCtaBarProps {
   label?: string
   href?: string
   external?: boolean
-  whatsappMessage?: string
+  contactHref?: string
 }
 
 // Barra de acción fija en teléfonos: aparece al bajar del primer pantallazo
-// y deja siempre a mano la inscripción y el contacto por WhatsApp.
+// y deja siempre a mano la inscripción y el formulario de contacto.
 // El footer reserva espacio extra abajo en mobile para que la barra no lo tape.
 export function MobileCtaBar({
   label = "Empezar gratis",
   href = "/cursos/introduccion",
   external = false,
-  whatsappMessage,
+  contactHref = CONTACT_URL,
 }: MobileCtaBarProps) {
   const [visible, setVisible] = useState(false)
 
@@ -38,14 +38,12 @@ export function MobileCtaBar({
     >
       <div className="flex items-center gap-3 px-4 py-3">
         <Link
-          href={whatsappUrl(whatsappMessage)}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Consultar por WhatsApp"
+          href={contactHref}
+          aria-label="Escribinos"
           tabIndex={visible ? 0 : -1}
-          className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-verde-600 text-white active:bg-verde-700"
+          className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-ink-950 text-white active:bg-ink-800"
         >
-          <MessageCircle className="h-6 w-6" />
+          <Mail className="h-5 w-5" />
         </Link>
         <Link
           href={href}

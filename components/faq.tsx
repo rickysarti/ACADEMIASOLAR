@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { MessageCircle } from "lucide-react"
+import { Mail } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { SectionHeader } from "@/components/brand/section"
 import { JsonLd } from "@/components/json-ld"
-import { whatsappUrl } from "@/lib/site"
+import { CONTACT_URL } from "@/lib/site"
 
 const faqs = [
   {
@@ -75,10 +75,10 @@ export function FAQ() {
             title="Resolvemos tus dudas"
             lead="Todo lo que necesitás saber antes de anotarte. ¿No encontrás tu respuesta? Escribinos."
           />
-          <Button asChild variant="verde" size="xl" className="mt-6">
-            <Link href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-5 w-5" />
-              Consultar por WhatsApp
+          <Button asChild variant="ink" size="xl" className="mt-6">
+            <Link href={CONTACT_URL}>
+              <Mail className="h-5 w-5" />
+              Escribinos
             </Link>
           </Button>
         </div>

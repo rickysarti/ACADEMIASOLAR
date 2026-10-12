@@ -1,8 +1,8 @@
 import Link from "next/link"
-import { ArrowRight, Clock, Mail, MapPin, MessageCircle } from "lucide-react"
+import { ArrowRight, Clock, Mail, MapPin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { LogoMark } from "@/components/brand/logo"
-import { CONTACT_EMAIL, CONTACT_URL, WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/site"
+import { CONTACT_EMAIL, CONTACT_URL } from "@/lib/site"
 
 export function CTA() {
   return (
@@ -29,7 +29,7 @@ export function CTA() {
                 </Link>
               </Button>
               <Button asChild variant="glass" size="xl">
-                <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
+                <Link href={CONTACT_URL}>
                   Solicitar información
                 </Link>
               </Button>
@@ -40,15 +40,15 @@ export function CTA() {
             <h3 className="text-lg font-bold">Hablemos</h3>
             <ul className="mt-5 space-y-4">
               <li>
-                <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4">
+                <Link href={CONTACT_URL} className="group flex items-center gap-4">
                   <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-verde-500/20">
-                    <MessageCircle className="h-5 w-5 text-verde-400" />
+                    <Send className="h-5 w-5 text-verde-400" />
                   </span>
                   <span>
-                    <span className="block text-sm text-white/60">WhatsApp</span>
-                    <span className="font-medium group-hover:text-verde-400">{WHATSAPP_DISPLAY}</span>
+                    <span className="block text-sm text-white/60">Formulario</span>
+                    <span className="font-medium group-hover:text-verde-400">Dejanos tu consulta</span>
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a href={`mailto:${CONTACT_EMAIL}`} className="group flex items-center gap-4">

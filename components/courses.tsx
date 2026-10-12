@@ -20,8 +20,6 @@ export function Courses() {
               Precios disponibles próximamente para quienes no accedan al cupo gratuito.{" "}
               <Link
                 href={CONTACT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="font-semibold text-sol-700 underline underline-offset-2"
               >
                 Consultanos

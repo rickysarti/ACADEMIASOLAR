@@ -85,7 +85,7 @@ Academia Solar es la division educativa de SolarPower Argentina, empresa lider e
 - Pagina principal: /
 - Todos los cursos: /#cursos
 - Preguntas frecuentes: /#faq
-- Contacto: https://www.solarpower.com.ar/contacto
+- Contacto: https://www.academiasolar.com.ar/contacto
 - Plataforma de alumnos: https://www.solarpower.com.ar/login
 
 ## Sobre SolarPower Argentina

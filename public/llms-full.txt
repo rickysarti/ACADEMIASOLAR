@@ -164,7 +164,7 @@ El curso de Instalador incluye certificacion de la Camara Argentina de la Indust
 ## Seccion 4: Informacion de Contacto
 
 - **Email**: info@solarpower.com.ar
-- **Formulario de contacto**: https://www.solarpower.com.ar/contacto
+- **Formulario de contacto**: https://www.academiasolar.com.ar/contacto
 - **Plataforma de alumnos**: https://www.solarpower.com.ar/login
 - **Ubicacion**: Buenos Aires, Argentina
 
@@ -176,7 +176,7 @@ El curso de Instalador incluye certificacion de la Camara Argentina de la Indust
 R: Para Instalador Solar recomendamos base de electricidad (ofrecemos curso preparatorio). Analista y Vendedor no requieren conocimientos previos.
 
 **P: Como accedo al cupo gratuito?**
-R: Contactanos a traves de solarpower.com.ar/contacto para consultar disponibilidad.
+R: Contactanos a traves de academiasolar.com.ar/contacto para consultar disponibilidad.
 
 **P: Los cursos son online o presenciales?**
 R: Depende del programa. Introduccion y Analista son 100% online. Instalador, Vendedor y Diplomatura son hibridos con jornadas presenciales.

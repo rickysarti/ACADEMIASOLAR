@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { Logo } from "@/components/brand/logo"
-import { CONTACT_EMAIL, WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/site"
+import { CONTACT_EMAIL, CONTACT_URL } from "@/lib/site"
 
 type FooterLink = { label: string; href: string; external?: boolean }
 
@@ -23,6 +23,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { label: "Cómo funciona", href: "/#como-funciona" },
       { label: "Blog", href: "/blog" },
       { label: "Preguntas frecuentes", href: "/#faq" },
+      { label: "Contacto", href: CONTACT_URL },
       { label: "Identidad de marca", href: "/marca" },
     ],
   },
@@ -32,7 +33,6 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { label: "Sobre SolarPower", href: "https://www.solarpower.com.ar/solarpower", external: true },
       { label: "Mapa de instalaciones", href: "https://www.solarpower.com.ar/mapa-instalaciones", external: true },
       { label: "¿Sos instalador?", href: "https://www.solarpower.com.ar/solarpower/sos-instalador", external: true },
-      { label: "Contacto", href: "https://www.solarpower.com.ar/contacto", external: true },
     ],
   },
 ]
@@ -52,9 +52,9 @@ export function Footer() {
               aplicada y conexión con el sector.
             </p>
             <div className="mt-6 space-y-1.5 text-sm">
-              <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="block text-white/80 hover:text-verde-400">
-                WhatsApp {WHATSAPP_DISPLAY}
-              </a>
+              <Link href={CONTACT_URL} className="block text-white/80 hover:text-sol-300">
+                Formulario de contacto
+              </Link>
               <a href={`mailto:${CONTACT_EMAIL}`} className="block text-white/80 hover:text-sol-300">
                 {CONTACT_EMAIL}
               </a>

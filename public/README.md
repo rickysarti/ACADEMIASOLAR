@@ -44,7 +44,7 @@ Este sitio esta construido con:
 
 - [Sitio Web](https://www.academiasolar.com.ar)
 - [SolarPower Argentina](https://www.solarpower.com.ar)
-- [Contacto](https://www.solarpower.com.ar/contacto)
+- [Contacto](https://www.academiasolar.com.ar/contacto)
 
 ## Archivos para IA/LLMs
 
@@ -55,7 +55,7 @@ Este sitio esta construido con:
 ## Contacto
 
 - Email: info@solarpower.com.ar
-- Web: https://www.solarpower.com.ar/contacto
+- Web: https://www.academiasolar.com.ar/contacto
 
 ---
 

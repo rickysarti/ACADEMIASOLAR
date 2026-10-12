@@ -1,13 +1,41 @@
 export const SITE_URL = "https://www.academiasolar.com.ar"
 
-export const CONTACT_URL = "https://www.solarpower.com.ar/contacto"
+// Todos los contactos de la academia pasan por el formulario propio (/contacto)
+// o por email.
+export const CONTACT_URL = "/contacto"
 export const CONTACT_EMAIL = "info@solarpower.com.ar"
-export const WHATSAPP_NUMBER = "5491134583958"
-export const WHATSAPP_DISPLAY = "+54 9 11 3458-3958"
 
-export function whatsappUrl(message = "¡Hola! Quiero información sobre los cursos de Academia Solar.") {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+/** Link al formulario con el curso preseleccionado (slug de /cursos/[slug]). */
+export function contactUrl(cursoSlug?: string) {
+  return cursoSlug ? `${CONTACT_URL}?curso=${cursoSlug}` : CONTACT_URL
 }
+
+export const PROVINCIAS = [
+  "Buenos Aires",
+  "Ciudad Autónoma de Buenos Aires",
+  "Catamarca",
+  "Chaco",
+  "Chubut",
+  "Córdoba",
+  "Corrientes",
+  "Entre Ríos",
+  "Formosa",
+  "Jujuy",
+  "La Pampa",
+  "La Rioja",
+  "Mendoza",
+  "Misiones",
+  "Neuquén",
+  "Río Negro",
+  "Salta",
+  "San Juan",
+  "San Luis",
+  "Santa Cruz",
+  "Santa Fe",
+  "Santiago del Estero",
+  "Tierra del Fuego",
+  "Tucumán",
+] as const
 
 export type CourseSummary = {
   title: string
@@ -79,4 +107,12 @@ export const shortCourses: CourseSummary[] = [
   { title: "Normativa Solar Argentina", duration: "2 semanas", modality: "Online", href: "/cursos/normativa-solar", image: "/images/course-analyst.jpg" },
   { title: "Solar para el Agro", duration: "4 semanas", modality: "Online", href: "/cursos/solar-agro", image: "/images/hero-solar-installation.jpg" },
   { title: "Climatización de Piscinas", duration: "3 semanas", modality: "Online", href: "/cursos/climatizacion-piscinas", image: "/images/course-installer.jpg" },
+]
+
+/** Opciones del campo "curso de interés" del formulario de contacto. */
+export const CONTACT_TOPICS = [
+  ...mainCourses.map((c) => ({ slug: c.href.replace("/cursos/", ""), label: c.title })),
+  ...shortCourses.map((c) => ({ slug: c.href.replace("/cursos/", ""), label: c.title })),
+  { slug: "empresas", label: "Capacitación para empresas" },
+  { slug: "general", label: "Consulta general" },
 ]

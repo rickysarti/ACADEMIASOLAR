@@ -3,10 +3,9 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
-import { Menu, X, ArrowRight, MessageCircle, ChevronRight } from "lucide-react"
+import { Menu, X, ArrowRight, Mail, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/brand/logo"
-import { whatsappUrl } from "@/lib/site"
 
 const navLinks = [
   { href: "/#cursos", label: "Cursos" },
@@ -14,6 +13,7 @@ const navLinks = [
   { href: "/#como-funciona", label: "Cómo funciona" },
   { href: "/blog", label: "Blog" },
   { href: "/#faq", label: "Preguntas" },
+  { href: "/contacto", label: "Contacto" },
 ]
 
 export function Header() {
@@ -76,7 +76,7 @@ export function Header() {
 
           <div className="hidden lg:flex lg:items-center lg:gap-1">
             {navLinks.map((link) => {
-              const active = link.href === "/blog" && pathname.startsWith("/blog")
+              const active = !link.href.includes("#") && pathname.startsWith(link.href)
               return (
                 <Link
                   key={link.href}
@@ -180,10 +180,10 @@ export function Header() {
                   Ingresar
                 </Link>
               </Button>
-              <Button asChild variant="verde" size="xl">
-                <Link href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5" />
-                  WhatsApp
+              <Button asChild variant="ink" size="xl">
+                <Link href="/contacto" onClick={closeMenu}>
+                  <Mail className="h-5 w-5" />
+                  Escribinos
                 </Link>
               </Button>
             </div>

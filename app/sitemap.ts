@@ -14,6 +14,11 @@ const STATIC_ROUTES: MetadataRoute.Sitemap = [
     images: [`${SITE_URL}/images/hero-solar-installation.jpg`],
   },
   {
+    url: `${SITE_URL}/contacto`,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
     url: `${SITE_URL}/blog`,
     changeFrequency: "daily",
     priority: 0.9,

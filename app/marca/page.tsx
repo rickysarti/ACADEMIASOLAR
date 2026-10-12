@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const colors = [
   { name: "Sol", hex: "#F59E0B", use: "Acción principal, botones y acentos", className: "bg-sol-500 text-ink-950" },
   { name: "Rayo", hex: "#FACC15", use: "Brillo del degradé amanecer", className: "bg-rayo text-ink-950" },
-  { name: "Verde", hex: "#16A34A", use: "Gratuito, confirmaciones, WhatsApp", className: "bg-verde-600 text-white" },
+  { name: "Verde", hex: "#16A34A", use: "Gratuito, confirmaciones y estados positivos", className: "bg-verde-600 text-white" },
   { name: "Ink", hex: "#0B1324", use: "Texto y superficies oscuras", className: "bg-ink-950 text-white" },
   { name: "Paper", hex: "#FAF8F3", use: "Fondo general cálido", className: "bg-paper text-ink-950 ring-1 ring-inset ring-ink-950/10" },
   { name: "Arena", hex: "#F1EDE4", use: "Fondos de sección alternos", className: "bg-arena text-ink-950" },
