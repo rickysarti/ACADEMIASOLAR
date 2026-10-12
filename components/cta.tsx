@@ -1,107 +1,85 @@
 import Link from "next/link"
+import { ArrowRight, Clock, Mail, MapPin, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"
-import Image from "next/image"
-import { CONTACT_URL, whatsappUrl } from "@/lib/site"
+import { LogoMark } from "@/components/brand/logo"
+import { CONTACT_EMAIL, CONTACT_URL, WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/site"
 
 export function CTA() {
   return (
-    <section className="py-16 sm:py-24 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/hero-solar-installation.jpg"
-          alt="Instalacion solar"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/90" />
-      </div>
+    <section className="bg-paper px-4 pb-20 sm:px-6 sm:pb-28 lg:px-8">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-ink-950 text-white sm:rounded-[2.5rem]">
+        <div className="halo-sol absolute inset-0" aria-hidden="true" />
+        <div className="bg-celdas absolute inset-0 text-white/[0.05]" aria-hidden="true" />
+        <LogoMark tone="light" className="absolute -right-16 -bottom-16 h-80 w-80 opacity-[0.06]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-          {/* Left content */}
+        <div className="relative grid gap-10 p-7 sm:p-12 lg:grid-cols-[1.3fr_1fr] lg:gap-16 lg:p-16">
           <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-6 leading-tight text-balance">
-              Comenza tu carrera en{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-green-400">
-                energia solar hoy
-              </span>
+            <h2 className="text-[2.1rem] font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+              Tu carrera en energía solar <span className="text-amanecer">empieza hoy.</span>
             </h2>
-            <p className="text-base sm:text-lg text-slate-300 mb-8 text-pretty">
-              Unite a la revolucion solar. Inscribite en nuestro curso gratuito de introduccion 
-              y descubri tu potencial en la industria de mayor crecimiento en Argentina.
+            <p className="mt-5 max-w-xl text-lg text-white/75">
+              Anotate en el curso gratuito de introducción y descubrí tu lugar en uno de los sectores con más
+              futuro de Argentina.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="btn-electric h-14 sm:h-12 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-900 font-semibold rounded-full shadow-lg shadow-amber-500/30 transition-all duration-200 hover:scale-[1.03] hover:shadow-amber-400/50"
-                asChild
-              >
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button asChild variant="sol" size="xl">
                 <Link href="/cursos/introduccion">
-                  Empezar Gratis
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Empezar gratis
+                  <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button 
-                size="lg" 
-                className="btn-electric-ghost h-14 sm:h-12 bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/30 font-semibold rounded-full transition-all duration-200 hover:scale-[1.03]"
-                asChild
-              >
+              <Button asChild variant="glass" size="xl">
                 <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
-                  Solicitar Informacion
+                  Solicitar información
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* Right content - Contact info */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-6">Contacto directo</h3>
-            
-            <div className="space-y-5 sm:space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex-shrink-0 rounded-full bg-amber-500/20 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-amber-400" />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-400">Email</p>
-                  <a href="mailto:info@solarpower.com.ar" className="break-all text-white hover:text-amber-400 transition-colors">
-                    info@solarpower.com.ar
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex-shrink-0 rounded-full bg-green-500/20 flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-green-400" />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-400">WhatsApp</p>
-                  <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition-colors">
-                    +54 9 11 3458-3958
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex-shrink-0 rounded-full bg-blue-500/20 flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <p className="text-sm text-slate-400">Ubicacion</p>
-                  <p className="text-white">Buenos Aires, Argentina</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-white/20">
-              <p className="text-sm text-slate-400 mb-2">Horario de atencion</p>
-              <p className="text-white">Lunes a Viernes: 9:00 - 18:00</p>
-              <p className="text-white">Sabados: 9:00 - 13:00</p>
-            </div>
+          <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-sm sm:p-7">
+            <h3 className="text-lg font-bold">Hablemos</h3>
+            <ul className="mt-5 space-y-4">
+              <li>
+                <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4">
+                  <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-verde-500/20">
+                    <MessageCircle className="h-5 w-5 text-verde-400" />
+                  </span>
+                  <span>
+                    <span className="block text-sm text-white/60">WhatsApp</span>
+                    <span className="font-medium group-hover:text-verde-400">{WHATSAPP_DISPLAY}</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="group flex items-center gap-4">
+                  <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-sol-500/20">
+                    <Mail className="h-5 w-5 text-sol-300" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm text-white/60">Email</span>
+                    <span className="text-sm font-medium group-hover:text-sol-300 sm:text-base">{CONTACT_EMAIL}</span>
+                  </span>
+                </a>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-white/10">
+                  <MapPin className="h-5 w-5 text-white/80" />
+                </span>
+                <span>
+                  <span className="block text-sm text-white/60">Ubicación</span>
+                  <span className="font-medium">Buenos Aires, Argentina</span>
+                </span>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-white/10">
+                  <Clock className="h-5 w-5 text-white/80" />
+                </span>
+                <span>
+                  <span className="block text-sm text-white/60">Horario</span>
+                  <span className="font-medium">Lun a Vie 9 a 18 h · Sáb 9 a 13 h</span>
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

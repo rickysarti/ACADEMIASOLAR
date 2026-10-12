@@ -3,11 +3,11 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Curso Normativa Solar y Ley 27.424 Argentina | Academia Solar - SolarPower",
-  description: "Aprende toda la regulacion de generacion distribuida: Ley 27.424, tramites EDENOR/EDESUR, netmetering. 2 semanas 100% online. Cupos gratuitos.",
+  description: "Aprendé toda la regulación de generación distribuida: Ley 27.424, trámites EDENOR/EDESUR, netmetering. 2 semanas 100% online. Cupos gratuitos.",
   keywords: "ley 27424 argentina, normativa energia solar, tramites edenor solar, generacion distribuida, netmetering argentina",
   openGraph: {
     title: "Normativa Solar Argentina | Academia Solar",
-    description: "2 semanas 100% online. Ley 27.424, tramites ante distribuidoras y netmetering.",
+    description: "2 semanas 100% online. Ley 27.424, trámites ante distribuidoras y netmetering.",
     images: ["/images/course-analyst.jpg"],
   },
 }
@@ -17,65 +17,65 @@ export default function NormativaSolarPage() {
     <CoursePage
       slug="normativa-solar"
       title="Normativa Solar Argentina"
-      subtitle="Todo sobre regulacion y tramites"
-      description="Conoce toda la regulacion vigente para generacion distribuida en Argentina: Ley 27.424, distribuidoras y tramites ante EDENOR, EDESUR y mas."
-      longDescription="Este curso te actualiza sobre todo el marco regulatorio de la energia solar en Argentina. Aprenderas a gestionar tramites ante distribuidoras, obtener habilitaciones municipales y entender el sistema de netmetering. Incluye plantillas de tramites descargables y actualizaciones por 1 ano."
+      subtitle="Todo sobre regulación y trámites"
+      description="Conocé toda la regulación vigente para generación distribuida en Argentina: Ley 27.424, distribuidoras y trámites ante EDENOR, EDESUR y más."
+      longDescription="Este curso te actualiza sobre todo el marco regulatorio de la energía solar en Argentina. Aprenderas a gestionar trámites ante distribuidoras, obtener habilitaciones municipales y entender el sistema de netmetering. Incluye plantillas de trámites descargables y actualizaciones por 1 año."
       duration="2 semanas"
       modality="100% Online"
       level="Principiante"
       image="/images/course-analyst.jpg"
       features={[
-        "Ley 27.424 de Generacion Distribuida y sus decretos",
+        "Ley 27.424 de Generación Distribuida y sus decretos",
         "Marco regulatorio del ENRE y provincias",
-        "Tramites ante distribuidoras: EDENOR, EDESUR, EPE y mas",
+        "Trámites ante distribuidoras: EDENOR, EDESUR, EPE y más",
         "Netmetering: como funciona y como tramitarlo",
         "Habilitaciones municipales y permisos de obra",
-        "Facturacion de energia inyectada y creditos",
-        "Requisitos tecnicos de conexion a red",
+        "Facturación de energía inyectada y créditos",
+        "Requisitos técnicos de conexion a red",
       ]}
       requirements={[
-        "Interes en el marco legal de la energia solar",
+        "Interes en el marco legal de la energía solar",
         "No se requieren conocimientos previos",
       ]}
       modules={[
         {
           title: "Marco Legal Nacional",
-          description: "Ley 27.424 y regulacion federal",
+          description: "Ley 27.424 y regulación federal",
           lessons: [
-            "Historia de la generacion distribuida en Argentina",
+            "Historia de la generación distribuida en Argentina",
             "Ley 27.424: principales articulos",
             "Decretos reglamentarios y resoluciones",
             "El rol del ENRE y las provincias",
           ],
         },
         {
-          title: "Tramites ante Distribuidoras",
+          title: "Trámites ante Distribuidoras",
           description: "Procedimientos paso a paso",
           lessons: [
-            "Tramite de conexion ante EDENOR",
-            "Tramite de conexion ante EDESUR",
+            "Trámite de conexion ante EDENOR",
+            "Trámite de conexion ante EDESUR",
             "Distribuidoras del interior: EPE, EPEC, etc.",
-            "Tiempos y costos de cada tramite",
+            "Tiempos y costos de cada trámite",
           ],
         },
         {
-          title: "Netmetering y Facturacion",
-          description: "Como funciona el sistema de creditos",
+          title: "Netmetering y Facturación",
+          description: "Cómo funciona el sistema de créditos",
           lessons: [
-            "Que es el netmetering y como funciona",
-            "Calculo de creditos por energia inyectada",
-            "Lectura de facturas con generacion solar",
-            "Casos practicos de facturacion",
+            "Qué es el netmetering y como funciona",
+            "Cálculo de créditos por energía inyectada",
+            "Lectura de facturas con generación solar",
+            "Casos prácticos de facturación",
           ],
         },
         {
           title: "Habilitaciones y Permisos",
-          description: "Requisitos municipales y tecnicos",
+          description: "Requisitos municipales y técnicos",
           lessons: [
             "Permisos de obra municipales",
-            "Requisitos tecnicos de conexion",
-            "Plantillas de tramites descargables",
-            "Examen final y certificacion",
+            "Requisitos técnicos de conexion",
+            "Plantillas de trámites descargables",
+            "Examen final y certificación",
           ],
         },
       ]}

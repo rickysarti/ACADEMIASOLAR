@@ -1,19 +1,19 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { Menu, X, ArrowRight, MessageCircle, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Logo } from "@/components/brand/logo"
 import { whatsappUrl } from "@/lib/site"
 
 const navLinks = [
   { href: "/#cursos", label: "Cursos" },
-  { href: "/#beneficios", label: "Beneficios" },
+  { href: "/#metodo", label: "Método" },
+  { href: "/#como-funciona", label: "Cómo funciona" },
   { href: "/blog", label: "Blog" },
-  { href: "/#testimonios", label: "Testimonios" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/#faq", label: "Preguntas" },
 ]
 
 export function Header() {
@@ -21,8 +21,8 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
-  // Solo la home tiene un hero oscuro detras del header; en el resto de las
-  // paginas el header siempre es solido para que el menu sea legible.
+  // Solo la home tiene un hero oscuro detrás del header; en el resto de las
+  // páginas el header siempre es sólido para que el menú sea legible.
   const overHero = pathname === "/" && !scrolled && !mobileMenuOpen
 
   useEffect(() => {
@@ -61,9 +61,7 @@ export function Header() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          overHero
-            ? "bg-gradient-to-b from-black/50 to-transparent"
-            : "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+          overHero ? "bg-transparent" : "bg-paper/90 backdrop-blur-xl border-b border-ink-950/8"
         }`}
       >
         <nav
@@ -72,76 +70,53 @@ export function Header() {
             overHero ? "h-20" : "h-16 lg:h-[72px]"
           }`}
         >
-          <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5 flex items-center" aria-label="Academia Solar - Inicio">
-              <Image
-                src={overHero ? "/images/academia-solar-logo-light.png" : "/images/academia-solar-logo-sm.png"}
-                alt="Academia Solar"
-                width={439}
-                height={160}
-                className={`w-auto transition-all duration-300 ${overHero ? "h-11 sm:h-12" : "h-9 sm:h-10"}`}
-                priority
-              />
-            </Link>
+          <Link href="/" className="-m-1.5 rounded-lg p-1.5" aria-label="Academia Solar - Inicio">
+            <Logo tone={overHero ? "light" : "dark"} markClassName={overHero ? "h-10 w-10" : "h-9 w-9"} />
+          </Link>
+
+          <div className="hidden lg:flex lg:items-center lg:gap-1">
+            {navLinks.map((link) => {
+              const active = link.href === "/blog" && pathname.startsWith("/blog")
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                    overHero
+                      ? "text-white/80 hover:bg-white/10 hover:text-white"
+                      : active
+                        ? "bg-ink-950/5 text-ink-950"
+                        : "text-ink-700 hover:bg-ink-950/5 hover:text-ink-950"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </div>
 
-          <div className="hidden lg:flex lg:gap-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  overHero
-                    ? "text-white/85 hover:text-white"
-                    : pathname.startsWith(link.href) && link.href !== "/"
-                      ? "text-foreground"
-                      : "text-foreground/70 hover:text-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden lg:flex lg:items-center lg:gap-2">
             <Link
-              href="https://www.solarpower.com.ar"
+              href="https://www.solarpower.com.ar/login"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-sm font-medium transition-colors ${
-                overHero ? "text-white/85 hover:text-white" : "text-foreground/70 hover:text-foreground"
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                overHero ? "text-white/80 hover:text-white" : "text-ink-700 hover:text-ink-950"
               }`}
             >
-              SolarPower
+              Ingresar
             </Link>
-          </div>
-
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
-            <Button
-              variant="ghost"
-              asChild
-              className={
-                overHero
-                  ? "text-white bg-white/15 hover:bg-white/25 hover:text-white border border-white/30"
-                  : "text-slate-700 hover:text-slate-900 hover:bg-slate-100"
-              }
-            >
-              <Link href="https://www.solarpower.com.ar/login" target="_blank" rel="noopener noreferrer">
-                Iniciar Sesion
+            <Button asChild variant="sol" className="h-10 px-5">
+              <Link href="/cursos/introduccion">
+                Empezar gratis
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <Button
-              asChild
-              className="btn-electric bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40"
-            >
-              <Link href="/cursos/introduccion">Empezar Gratis</Link>
-            </Button>
           </div>
 
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-1.5 lg:hidden">
             {!mobileMenuOpen && (
-              <Button
-                asChild
-                size="sm"
-                className="h-9 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold px-4"
-              >
+              <Button asChild variant="sol" className="h-9 px-4 text-sm">
                 <Link href="/cursos/introduccion">Gratis</Link>
               </Button>
             )}
@@ -151,81 +126,61 @@ export function Header() {
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
               className={`inline-flex h-11 w-11 items-center justify-center rounded-full transition-colors ${
-                overHero ? "text-white hover:bg-white/15" : "text-foreground hover:bg-muted"
+                overHero ? "text-white hover:bg-white/10" : "text-ink-950 hover:bg-ink-950/5"
               }`}
             >
-              <span className="sr-only">{mobileMenuOpen ? "Cerrar menu" : "Abrir menu"}</span>
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
-              )}
+              <span className="sr-only">{mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}</span>
+              {mobileMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </nav>
       </header>
 
-      {/* Mobile menu: va fuera del header porque su backdrop-blur recortaria un hijo fixed */}
+      {/* Menú mobile: va fuera del header porque su backdrop-blur recortaría un hijo fixed */}
       {mobileMenuOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-40 bg-background overflow-y-auto overscroll-contain animate-in fade-in slide-in-from-top-2 duration-200"
+          className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto overscroll-contain bg-paper animate-in fade-in slide-in-from-top-2 duration-200 lg:hidden"
         >
-          <div className="flex min-h-full flex-col px-4 sm:px-6 pt-4 pb-safe">
-            <ul className="divide-y divide-border">
+          <div className="flex min-h-full flex-col px-4 pt-2 pb-safe sm:px-6">
+            <ul className="divide-y divide-ink-950/8">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className="flex items-center justify-between py-4 text-lg font-semibold text-foreground active:text-amber-600"
+                    className="flex items-center justify-between py-4 font-display text-2xl font-semibold tracking-tight text-ink-950 active:text-sol-600"
                   >
                     {link.label}
-                    <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                    <ChevronRight className="h-5 w-5 text-ink-300" />
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="https://www.solarpower.com.ar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between py-4 text-lg font-semibold text-foreground"
-                >
-                  SolarPower
-                  <ChevronRight className="h-5 w-5 text-muted-foreground" />
-                </Link>
-              </li>
             </ul>
 
-            <div className="mt-6 rounded-2xl bg-gradient-to-br from-amber-50 to-green-50 border border-amber-200/60 p-5">
-              <p className="font-semibold text-slate-900">Empeza hoy, sin costo</p>
-              <p className="text-sm text-slate-600 mt-1 mb-4">
-                Curso de Introduccion a la Energia Solar: 2 horas, 100% online.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="w-full h-12 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold"
-              >
-                <Link href="/cursos/introduccion" onClick={closeMenu}>
-                  Empezar Gratis
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
+            <div className="relative mt-6 overflow-hidden rounded-3xl bg-ink-950 p-6 text-white">
+              <div className="halo-sol absolute inset-0" aria-hidden="true" />
+              <div className="relative">
+                <p className="font-display text-xl font-bold">Empezá hoy, sin costo</p>
+                <p className="mt-1 mb-5 text-sm text-white/70">
+                  Introducción a la Energía Solar: 2 horas, 100% online.
+                </p>
+                <Button asChild variant="sol" size="xl" className="w-full">
+                  <Link href="/cursos/introduccion" onClick={closeMenu}>
+                    Empezar gratis
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
             </div>
 
-            <div className="mt-4 grid grid-cols-2 gap-3 pb-6">
-              <Button variant="outline" asChild className="h-12 rounded-xl border-slate-300 text-slate-700">
+            <div className="mt-3 grid grid-cols-2 gap-3 pb-6">
+              <Button asChild variant="line" size="xl">
                 <Link href="https://www.solarpower.com.ar/login" target="_blank" rel="noopener noreferrer">
-                  Iniciar Sesion
+                  Ingresar
                 </Link>
               </Button>
-              <Button
-                variant="outline"
-                asChild
-                className="h-12 rounded-xl border-green-300 text-green-700 hover:bg-green-50 hover:text-green-800"
-              >
+              <Button asChild variant="verde" size="xl">
                 <Link href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="h-5 w-5" />
                   WhatsApp

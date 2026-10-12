@@ -1,89 +1,82 @@
 import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Cpu, Zap, Users } from "lucide-react"
+import { Cpu, HardHat, Network } from "lucide-react"
+import { SectionHeader } from "@/components/brand/section"
 
-const points = [
+const pillars = [
   {
-    icon: Zap,
-    color: "bg-primary/10 text-primary",
-    title: "Practicas en obras reales",
-    text: "Trabajas en instalaciones activas de SolarPower con supervision de expertos.",
+    icon: HardHat,
+    title: "Práctica en obras reales",
+    text: "Trabajás en instalaciones activas de SolarPower, con clientes reales y supervisión de instaladores experimentados.",
+    color: "bg-sol-100 text-sol-700",
   },
   {
     icon: Cpu,
-    color: "bg-secondary/10 text-secondary",
-    title: "Capacitacion en IA incluida",
-    text: "Todos los cursos incluyen modulos de inteligencia artificial aplicada al sector solar.",
+    title: "IA aplicada al trabajo solar",
+    text: "Todos los cursos incluyen módulos para diseñar, cotizar y vender más rápido con herramientas de inteligencia artificial.",
+    color: "bg-verde-100 text-verde-700",
   },
   {
-    icon: Users,
-    color: "bg-primary/10 text-primary",
-    title: "La mejor salida laboral",
-    text: "Acceso a la red de instaladores y vendedores de SolarPower Argentina.",
+    icon: Network,
+    title: "Conexión con el sector",
+    text: "Al terminar, accedés a la red de instaladores, vendedores y empresas que trabajan con SolarPower Argentina.",
+    color: "bg-ink-950/5 text-ink-950",
   },
 ]
 
 export function WhyChoose() {
   return (
-    <section className="py-16 sm:py-20 lg:py-32 bg-muted/30">
+    <section id="metodo" className="bg-paper py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-          {/* Image side */}
-          <div className="relative mr-3 sm:mr-6">
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/hero-solar-installation.jpg"
-                alt="Instalacion solar real"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-3 sm:-right-6 bg-slate-900 text-white rounded-2xl px-5 py-4 sm:p-6 shadow-xl max-w-[16rem] sm:max-w-xs">
-              <p className="text-xs sm:text-sm text-slate-400 mb-1">Equipo docente</p>
-              <p className="font-bold text-base sm:text-lg">SolarPower Argentina</p>
-              <p className="text-xs sm:text-sm text-slate-400">Profesionales del sector</p>
+        <div className="grid items-end gap-8 lg:grid-cols-2 lg:gap-16">
+          <SectionHeader
+            eyebrow="El método Academia Solar"
+            title={
+              <>
+                Teoría online.
+                <br />
+                <span className="text-sol-600">Oficio en el techo.</span>
+              </>
+            }
+          />
+          <p className="text-lg leading-relaxed text-ink-700 lg:pb-2">
+            La diferencia es simple: además de estudiar, salís a instalar paneles de verdad. Aprendés el
+            oficio como se aprende en serio, al lado de quienes lo hacen todos los días.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-4 sm:mt-16 lg:grid-cols-[1.15fr_1fr] lg:gap-6">
+          <div className="relative min-h-[18rem] overflow-hidden rounded-[2rem] sm:min-h-[24rem]">
+            <Image
+              src="/images/course-installer.jpg"
+              alt="Instalador fijando un panel solar"
+              fill
+              sizes="(max-width: 1024px) 100vw, 55vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
+            <div className="absolute inset-x-5 bottom-5 sm:inset-x-7 sm:bottom-7">
+              <p className="max-w-sm font-display text-2xl font-bold leading-tight text-white sm:text-3xl">
+                Equipo docente: profesionales activos de SolarPower Argentina.
+              </p>
             </div>
           </div>
 
-          {/* Content side */}
-          <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5 sm:mb-6 text-balance">
-              No aprendes en un aula.
-              <br />
-              <span className="text-primary">Aprendes en el techo.</span>
-            </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed text-pretty">
-              La diferencia entre Academia Solar y cualquier otro curso es simple: nosotros te llevamos
-              a instalar paneles de verdad. Con clientes reales. En obras reales.
-            </p>
-
-            <div className="space-y-5 sm:space-y-6 mb-10">
-              {points.map((point) => (
-                <div key={point.title} className="flex items-start gap-4">
-                  <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${point.color}`}>
-                    <point.icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">{point.title}</h3>
-                    <p className="text-muted-foreground">{point.text}</p>
-                  </div>
+          <ol className="grid gap-4">
+            {pillars.map((pillar, index) => (
+              <li key={pillar.title} className="flex gap-5 rounded-3xl border border-ink-950/8 bg-white p-6 sm:p-7">
+                <div className="flex flex-col items-center gap-3">
+                  <span className={`flex h-12 w-12 items-center justify-center rounded-2xl ${pillar.color}`}>
+                    <pillar.icon className="h-6 w-6" />
+                  </span>
+                  <span className="font-display text-sm font-bold text-ink-300">0{index + 1}</span>
                 </div>
-              ))}
-            </div>
-
-            <Button
-              size="lg"
-              asChild
-              className="btn-electric w-full sm:w-auto h-12 bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40"
-            >
-              <Link href="#cursos">
-                Ver programas disponibles
-                <ArrowRight className="ml-1 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
+                <div>
+                  <h3 className="text-xl font-bold text-ink-950">{pillar.title}</h3>
+                  <p className="mt-2 leading-relaxed text-ink-700">{pillar.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>

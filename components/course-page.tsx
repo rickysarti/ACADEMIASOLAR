@@ -1,22 +1,24 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import {
-  Clock,
-  BookOpen,
-  Gift,
-  Cpu,
-  ArrowRight,
   ArrowLeft,
-  CheckCircle2,
-  Users,
+  ArrowRight,
+  ArrowUpRight,
   Award,
-  PlayCircle,
+  BookOpen,
+  Check,
   ChevronDown,
+  Clock,
+  Cpu,
+  Gift,
+  HardHat,
   MessageCircle,
-  Wrench,
+  PlayCircle,
+  Users,
 } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Eyebrow } from "@/components/brand/section"
+import { LogoMark } from "@/components/brand/logo"
 import { JsonLd } from "@/components/json-ld"
 import { MobileCtaBar } from "@/components/mobile-cta-bar"
 import { CONTACT_URL, SITE_URL, mainCourses, shortCourses, whatsappUrl } from "@/lib/site"
@@ -46,8 +48,8 @@ interface CoursePageProps {
 
 const includes = [
   { icon: Award, label: "Certificado" },
-  { icon: Wrench, label: "Casos reales" },
-  { icon: Cpu, label: "Modulo de IA" },
+  { icon: HardHat, label: "Casos reales" },
+  { icon: Cpu, label: "Módulo de IA" },
   { icon: Users, label: "Red SolarPower" },
 ]
 
@@ -69,7 +71,7 @@ export function CoursePage({
 }: CoursePageProps) {
   const href = `/cursos/${slug}`
   const ctaLabel = isFree ? "Empezar ahora" : "Consultar cupo gratuito"
-  const whatsappMessage = `Hola! Quiero informacion sobre el curso "${title}" de Academia Solar.`
+  const whatsappMessage = `¡Hola! Quiero información sobre el curso "${title}" de Academia Solar.`
   const totalLessons = modules.reduce((sum, module) => sum + module.lessons.length, 0)
   const otherCourses = [...mainCourses, shortCourses[0]].filter((course) => course.href !== href).slice(0, 3)
 
@@ -84,204 +86,213 @@ export function CoursePage({
     educationalLevel: level,
     isAccessibleForFree: isFree,
     provider: {
-      "@type": "Organization",
-      name: "Academia Solar - SolarPower Argentina",
+      "@type": "EducationalOrganization",
+      name: "Academia Solar",
       sameAs: SITE_URL,
     },
   }
+
+  const stats = [
+    { icon: Clock, label: "Duración", value: duration },
+    { icon: BookOpen, label: "Modalidad", value: modality },
+    { icon: PlayCircle, label: "Contenido", value: `${modules.length} ${modules.length === 1 ? "módulo" : "módulos"} · ${totalLessons} clases` },
+    { icon: Users, label: "Docentes", value: instructor },
+  ]
 
   return (
     <div className="pt-16 lg:pt-[72px]">
       <JsonLd data={courseJsonLd} />
 
-      {/* Hero section */}
-      <section className="relative overflow-hidden bg-slate-900 py-10 text-white sm:py-16 lg:py-24">
-        <div className="absolute inset-0 z-0">
-          <Image src={image} alt="" fill sizes="100vw" className="object-cover opacity-25" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/80" />
-        </div>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-ink-950 text-white">
+        <div className="halo-sol absolute inset-0" aria-hidden="true" />
+        <div className="bg-celdas absolute inset-0 text-white/[0.04]" aria-hidden="true" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/#cursos"
-            className="-ml-2 mb-6 inline-flex items-center gap-2 rounded-full px-2 py-1.5 text-sm text-white/60 transition-colors hover:text-white sm:mb-8"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Volver a cursos
-          </Link>
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16 lg:px-8 lg:py-20">
+          <div>
+            <Link
+              href="/#cursos"
+              className="-ml-2 inline-flex items-center gap-2 rounded-full px-2 py-1.5 text-sm text-white/60 transition-colors hover:text-white"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Todos los cursos
+            </Link>
 
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
-              <div className="mb-4 flex flex-wrap items-center gap-2">
-                {isFree && <Badge className="bg-green-600 text-white">GRATIS</Badge>}
-                <Badge variant="outline" className="border-white/30 text-white">
-                  {level}
-                </Badge>
-                <Badge variant="outline" className="border-amber-400/40 bg-amber-400/10 text-amber-300">
-                  <Cpu className="mr-1 h-3 w-3" />
-                  +IA incluida
-                </Badge>
-              </div>
-
-              <h1 className="mb-3 text-3xl font-bold leading-tight text-balance sm:text-4xl lg:text-5xl">{title}</h1>
-              <p className="mb-5 text-lg text-amber-400 sm:mb-6 sm:text-xl">{subtitle}</p>
-              <p className="mb-7 text-base leading-relaxed text-white/75 sm:mb-8 sm:text-lg">{description}</p>
-
-              <dl className="mb-8 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
-                <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2.5 sm:rounded-full sm:px-4 sm:py-2">
-                  <Clock className="h-4 w-4 flex-shrink-0 text-amber-400" />
-                  <dt className="sr-only">Duracion</dt>
-                  <dd className="text-sm">{duration}</dd>
-                </div>
-                <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2.5 sm:rounded-full sm:px-4 sm:py-2">
-                  <BookOpen className="h-4 w-4 flex-shrink-0 text-amber-400" />
-                  <dt className="sr-only">Modalidad</dt>
-                  <dd className="text-sm">{modality}</dd>
-                </div>
-                <div className="col-span-2 flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2.5 sm:rounded-full sm:px-4 sm:py-2">
-                  <Users className="h-4 w-4 flex-shrink-0 text-amber-400" />
-                  <dt className="sr-only">Instructor</dt>
-                  <dd className="text-sm">{instructor}</dd>
-                </div>
-              </dl>
-
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                <Button
-                  size="lg"
-                  asChild
-                  className="btn-electric h-12 bg-amber-500 font-semibold text-slate-900 transition-all duration-200 hover:scale-[1.03] hover:bg-amber-600 hover:shadow-lg hover:shadow-amber-400/40"
-                >
-                  <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
-                    {ctaLabel}
-                    <ArrowRight className="ml-1 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  asChild
-                  className="h-12 border-white/30 bg-white/5 text-white hover:bg-white/15 hover:text-white"
-                >
-                  <Link href={whatsappUrl(whatsappMessage)} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="h-5 w-5" />
-                    Consultar por WhatsApp
-                  </Link>
-                </Button>
-              </div>
-              {!isFree && (
-                <p className="mt-4 flex items-center gap-2 text-sm text-white/70">
-                  <Gift className="h-4 w-4 text-green-400" />
-                  Cupos gratuitos disponibles para los primeros inscriptos
-                </p>
-              )}
+            <div className="mt-6 flex flex-wrap items-center gap-2">
+              {isFree && <span className="rounded-full bg-verde-500 px-3 py-1 text-xs font-bold text-ink-950">GRATIS</span>}
+              <span className="rounded-full border border-white/25 px-3 py-1 text-xs font-semibold">{level}</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-sol-500/15 px-3 py-1 text-xs font-semibold text-sol-300">
+                <Cpu className="h-3 w-3" />
+                IA incluida
+              </span>
             </div>
 
-            <div className="relative hidden lg:block">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
-                <Image src={image} alt={title} fill sizes="50vw" className="object-cover" />
-              </div>
-              <div className="absolute -bottom-4 -left-4 rounded-xl bg-primary p-4">
-                <div className="flex items-center gap-3">
-                  <Cpu className="h-6 w-6 text-primary-foreground" />
-                  <span className="text-sm font-semibold text-primary-foreground">+IA Incluida</span>
-                </div>
-              </div>
+            <h1 className="mt-5 text-[2.1rem] font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">{title}</h1>
+            <p className="mt-3 font-display text-lg font-semibold text-sol-300 sm:text-xl">{subtitle}</p>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">{description}</p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button asChild variant="sol" size="xl">
+                <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
+                  {ctaLabel}
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="glass" size="xl">
+                <Link href={whatsappUrl(whatsappMessage)} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="h-5 w-5" />
+                  Consultar por WhatsApp
+                </Link>
+              </Button>
+            </div>
+            {!isFree && (
+              <p className="mt-4 flex items-center gap-2 text-sm text-white/70">
+                <Gift className="h-4 w-4 text-verde-400" />
+                Cupos gratuitos para los primeros inscriptos de cada cohorte
+              </p>
+            )}
+          </div>
+
+          <div className="relative hidden lg:block">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-white/15">
+              <Image src={image} alt={title} fill priority sizes="40vw" className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 to-transparent" />
+            </div>
+            <div className="absolute -bottom-5 -left-6 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-ink-950 shadow-2xl">
+              <LogoMark className="h-9 w-9" />
+              <span className="text-sm font-semibold leading-tight">
+                Formación con
+                <br />
+                práctica real
+              </span>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Includes strip */}
-      <section className="border-b border-border bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-4 divide-x divide-border px-2 sm:px-6 lg:px-8">
-          {includes.map((item) => (
-            <div
-              key={item.label}
-              className="flex flex-col items-center gap-1.5 px-1 py-4 text-center sm:flex-row sm:justify-center sm:gap-3 sm:py-5"
-            >
-              <item.icon className="h-5 w-5 text-amber-600" />
-              <span className="text-[11px] font-medium leading-tight text-slate-700 sm:text-sm">{item.label}</span>
-            </div>
-          ))}
+        {/* Datos clave */}
+        <div className="relative border-t border-white/10 bg-white/[0.03]">
+          <dl className="mx-auto grid max-w-7xl grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className={`flex gap-3 px-4 py-5 sm:px-6 lg:px-8 ${index % 2 === 0 ? "border-r border-white/10" : ""} ${
+                  index < 2 ? "border-b border-white/10 lg:border-b-0" : ""
+                } ${index === 1 ? "lg:border-r" : ""}`}
+              >
+                <stat.icon className="mt-0.5 h-5 w-5 flex-shrink-0 text-sol-400" />
+                <div className="min-w-0">
+                  <dt className="text-xs uppercase tracking-[0.14em] text-white/50">{stat.label}</dt>
+                  <dd className="mt-1 text-sm font-semibold leading-snug sm:text-base">{stat.value}</dd>
+                </div>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
-      {/* Features section */}
-      <section className="py-12 sm:py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
-            {/* What you'll learn */}
-            <div>
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:mb-6 sm:text-3xl">Que vas a aprender</h2>
-              <ul className="grid gap-3 sm:gap-4">
-                {features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-secondary" />
-                    <span className="text-foreground">{feature}</span>
-                  </li>
-                ))}
-                <li className="flex items-start gap-3">
-                  <Cpu className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-foreground">Como utilizar IA en el sector solar</span>
-                </li>
-              </ul>
-            </div>
+      {/* Mobile: imagen del curso */}
+      <div className="bg-paper px-4 pt-8 sm:px-6 lg:hidden">
+        <div className="relative mx-auto aspect-[16/9] max-w-3xl overflow-hidden rounded-3xl">
+          <Image src={image} alt={title} fill sizes="100vw" className="object-cover" />
+        </div>
+      </div>
 
-            {/* Requirements */}
-            <div>
-              <h2 className="mb-5 text-2xl font-bold text-foreground sm:mb-6 sm:text-3xl">Requisitos</h2>
-              <ol className="grid gap-3 sm:gap-4">
+      {/* Qué vas a aprender + requisitos */}
+      <section className="bg-paper py-14 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.3fr_1fr] lg:gap-16 lg:px-8">
+          <div className="min-w-0">
+            <Eyebrow>Programa</Eyebrow>
+            <h2 className="mt-3 text-3xl font-bold text-ink-950 sm:text-4xl">Qué vas a aprender</h2>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              {features.map((feature) => (
+                <li key={feature} className="flex gap-3 rounded-2xl border border-ink-950/8 bg-white p-4">
+                  <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-verde-100">
+                    <Check className="h-3 w-3 text-verde-700" strokeWidth={3} />
+                  </span>
+                  <span className="text-ink-800">{feature}</span>
+                </li>
+              ))}
+              <li className="flex gap-3 rounded-2xl border border-sol-200 bg-sol-50 p-4">
+                <Cpu className="mt-0.5 h-5 w-5 flex-shrink-0 text-sol-700" />
+                <span className="font-medium text-ink-800">Cómo usar IA en el trabajo solar</span>
+              </li>
+            </ul>
+
+            <div className="mt-8 grid grid-cols-2 gap-4 rounded-3xl bg-white p-5 ring-1 ring-ink-950/8 sm:flex sm:justify-between sm:p-6">
+              {includes.map((item) => (
+                <div key={item.label} className="flex items-center gap-2.5">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sol-100">
+                    <item.icon className="h-4 w-4 text-sol-700" />
+                  </span>
+                  <span className="text-sm font-semibold text-ink-800">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <aside className="lg:sticky lg:top-28 lg:self-start">
+            <div className="rounded-3xl bg-white p-6 ring-1 ring-ink-950/8 sm:p-7">
+              <h2 className="text-xl font-bold text-ink-950">Requisitos</h2>
+              <ol className="mt-5 grid gap-3">
                 {requirements.map((req, index) => (
                   <li key={req} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-muted text-xs font-semibold text-muted-foreground">
+                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-ink-950 text-xs font-bold text-white">
                       {index + 1}
                     </span>
-                    <span className="text-muted-foreground">{req}</span>
+                    <span className="text-ink-700">{req}</span>
                   </li>
                 ))}
               </ol>
-
-              <div className="mt-8 rounded-2xl border border-border bg-muted/50 p-5 sm:p-6">
-                <h3 className="mb-2 font-semibold text-foreground">Descripcion completa</h3>
-                <p className="leading-relaxed text-muted-foreground">{longDescription}</p>
+              <div className="mt-6 border-t border-ink-950/8 pt-6">
+                <h3 className="font-bold text-ink-950">Sobre el curso</h3>
+                <p className="mt-2 leading-relaxed text-ink-700">{longDescription}</p>
               </div>
+              <Button asChild variant="sol" size="xl" className="mt-6 hidden w-full lg:inline-flex">
+                <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
+                  {ctaLabel}
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
             </div>
-          </div>
+          </aside>
         </div>
       </section>
 
-      {/* Modules section */}
-      <section className="bg-muted/30 py-12 sm:py-16 lg:py-24">
+      {/* Módulos */}
+      <section className="bg-arena py-14 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 text-center sm:mb-12">
-            <h2 className="mb-2 text-2xl font-bold text-foreground sm:text-3xl">Contenido del curso</h2>
-            <p className="text-muted-foreground">
-              {modules.length} {modules.length === 1 ? "modulo" : "modulos"} · {totalLessons} clases
+          <div className="text-center">
+            <Eyebrow>Contenido</Eyebrow>
+            <h2 className="mt-3 text-3xl font-bold text-ink-950 sm:text-4xl">Módulo por módulo</h2>
+            <p className="mt-2 text-ink-700">
+              {modules.length} {modules.length === 1 ? "módulo" : "módulos"} · {totalLessons} clases
             </p>
           </div>
 
-          <div className="grid gap-3 sm:gap-4">
+          <div className="mt-10 grid gap-3">
             {modules.map((module, index) => (
               <details
                 key={module.title}
                 open={index === 0}
-                className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+                className="group overflow-hidden rounded-3xl bg-white ring-1 ring-ink-950/8 open:shadow-lg open:shadow-ink-950/5"
               >
-                <summary className="flex cursor-pointer list-none items-center gap-4 p-4 sm:p-6 [&::-webkit-details-marker]:hidden">
-                  <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-amber-500 font-bold text-slate-900">
+                <summary className="flex cursor-pointer list-none items-center gap-4 p-5 sm:p-6 [&::-webkit-details-marker]:hidden">
+                  <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl bg-ink-950 font-display text-lg font-bold text-sol-400 group-open:bg-sol-500 group-open:text-ink-950">
                     {index + 1}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block font-semibold leading-snug text-foreground">{module.title}</span>
-                    <span className="mt-0.5 block text-sm text-muted-foreground">{module.description}</span>
+                    <span className="block font-display text-lg font-bold leading-snug text-ink-950">{module.title}</span>
+                    <span className="mt-0.5 block text-sm text-ink-500">
+                      {module.description} · {module.lessons.length} clases
+                    </span>
                   </span>
-                  <ChevronDown className="h-5 w-5 flex-shrink-0 text-muted-foreground transition-transform group-open:rotate-180" />
+                  <ChevronDown className="h-5 w-5 flex-shrink-0 text-ink-500 transition-transform group-open:rotate-180" />
                 </summary>
-                <ul className="grid gap-3 border-t border-border px-4 py-4 sm:px-6 sm:py-5">
+                <ul className="grid gap-3 border-t border-ink-950/8 px-5 py-5 sm:px-6">
                   {module.lessons.map((lesson) => (
-                    <li key={lesson} className="flex items-start gap-3 text-sm">
-                      <PlayCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                      <span className="text-muted-foreground">{lesson}</span>
+                    <li key={lesson} className="flex items-start gap-3 text-[15px]">
+                      <PlayCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-sol-600" />
+                      <span className="text-ink-700">{lesson}</span>
                     </li>
                   ))}
                 </ul>
@@ -291,70 +302,71 @@ export function CoursePage({
         </div>
       </section>
 
-      {/* Other courses */}
-      <section className="py-12 sm:py-16">
+      {/* Otros programas */}
+      <section className="bg-paper py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-2xl font-bold text-foreground sm:mb-8 sm:text-3xl">Otros programas</h2>
-          <div className="grid gap-4 sm:grid-cols-3 sm:gap-6">
+          <h2 className="text-3xl font-bold text-ink-950">Otros programas</h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3 sm:gap-5">
             {otherCourses.map((course) => (
               <Link
                 key={course.href}
                 href={course.href}
-                className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-3 transition-all hover:border-amber-300 hover:shadow-lg sm:flex-col sm:items-stretch sm:p-0 sm:overflow-hidden"
+                className="group flex items-center gap-4 rounded-3xl bg-white p-3 ring-1 ring-ink-950/8 transition-all hover:shadow-xl hover:shadow-ink-950/5 sm:flex-col sm:items-stretch sm:overflow-hidden sm:p-0"
               >
-                <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl sm:aspect-[16/9] sm:h-auto sm:w-full sm:rounded-none">
+                <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-2xl sm:aspect-[16/10] sm:h-auto sm:w-full sm:rounded-none">
                   <Image
                     src={course.image}
                     alt=""
                     fill
                     sizes="(max-width: 640px) 80px, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <div className="min-w-0 flex-1 sm:p-5 sm:pt-1">
-                  <p className="font-semibold leading-snug text-foreground group-hover:text-amber-600">{course.title}</p>
-                  <p className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
-                    <Clock className="h-3.5 w-3.5" />
+                <div className="min-w-0 flex-1 sm:p-5">
+                  <p className="font-display text-lg font-bold leading-snug text-ink-950">{course.title}</p>
+                  <p className="mt-1 text-sm text-ink-500">
                     {course.duration} · {course.modality}
                   </p>
                 </div>
-                <ArrowRight className="h-5 w-5 flex-shrink-0 text-muted-foreground sm:hidden" />
+                <ArrowUpRight className="h-5 w-5 flex-shrink-0 text-ink-300 sm:hidden" />
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA section */}
-      <section className="bg-slate-900 py-14 sm:py-16 lg:py-24">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <Award className="mx-auto mb-5 h-14 w-14 text-amber-400/40 sm:mb-6 sm:h-16 sm:w-16" />
-          <h2 className="mb-4 text-3xl font-bold text-white text-balance lg:text-4xl">
-            {isFree ? "Empeza ahora, es gratis" : "Consulta tu cupo gratuito"}
-          </h2>
-          <p className="mb-8 text-lg text-slate-300 text-pretty sm:text-xl">
-            {isFree
-              ? "Este curso es completamente gratuito. Empieza hoy y descubre tu potencial en la energia solar."
-              : "Todos nuestros programas tienen cupos gratuitos disponibles. Consulta si podes acceder."}
-          </p>
-          <div className="mx-auto flex max-w-sm flex-col justify-center gap-3 sm:max-w-none sm:flex-row sm:gap-4">
-            <Button
-              size="lg"
-              asChild
-              className="btn-electric h-12 bg-amber-500 font-semibold text-slate-900 transition-all duration-200 hover:scale-[1.03] hover:bg-amber-600 hover:shadow-xl hover:shadow-amber-400/50"
-            >
-              <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
-                {isFree ? "Empezar gratis" : "Solicitar cupo gratuito"}
-                <ArrowRight className="ml-1 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              asChild
-              className="btn-electric-ghost h-12 border-2 border-white/30 bg-white/20 text-white backdrop-blur-sm transition-all duration-200 hover:scale-[1.02] hover:bg-white/30"
-            >
-              <Link href="/#cursos">Ver otros cursos</Link>
-            </Button>
+      {/* CTA */}
+      <section className="bg-paper px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-ink-950 px-6 py-12 text-center text-white sm:px-12 sm:py-16">
+          <div className="halo-sol absolute inset-0" aria-hidden="true" />
+          <div className="relative mx-auto max-w-2xl">
+            <h2 className="text-3xl font-extrabold sm:text-5xl">
+              {isFree ? (
+                <>
+                  Empezá ahora, <span className="text-amanecer">es gratis</span>
+                </>
+              ) : (
+                <>
+                  Consultá tu <span className="text-amanecer">cupo gratuito</span>
+                </>
+              )}
+            </h2>
+            <p className="mt-4 text-lg text-white/75">
+              {isFree
+                ? "Este curso es completamente gratuito. Empezá hoy y descubrí tu potencial en la energía solar."
+                : "Todos nuestros programas tienen cupos gratuitos. Escribinos y te contamos si podés acceder."}
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <Button asChild variant="sol" size="xl">
+                <Link href={CONTACT_URL} target="_blank" rel="noopener noreferrer">
+                  {isFree ? "Empezar gratis" : "Solicitar cupo gratuito"}
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="glass" size="xl">
+                <Link href="/#cursos">Ver otros cursos</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

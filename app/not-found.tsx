@@ -3,31 +3,32 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { LogoMark } from "@/components/brand/logo"
 
 export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="flex min-h-[70svh] items-center bg-slate-900 px-4 pt-16 text-white sm:px-6 lg:pt-[72px]">
-        <div className="mx-auto max-w-xl py-20 text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-amber-400">Error 404</p>
-          <h1 className="mb-4 text-3xl font-bold text-balance sm:text-5xl">Esta pagina no existe</h1>
-          <p className="mb-8 text-white/70 text-pretty">
-            Puede que el enlace este mal escrito o que el contenido se haya movido. Te dejamos algunos atajos.
+      <main className="relative flex min-h-[75svh] items-center overflow-hidden bg-ink-950 px-4 pt-16 text-white sm:px-6 lg:pt-[72px]">
+        <div className="halo-sol absolute inset-0" aria-hidden="true" />
+        <div className="bg-celdas absolute inset-0 text-white/[0.04]" aria-hidden="true" />
+        <div className="relative mx-auto max-w-xl py-20 text-center">
+          <LogoMark tone="light" className="mx-auto h-16 w-16" />
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-sol-300">Error 404</p>
+          <h1 className="mt-3 text-4xl font-extrabold sm:text-6xl">
+            Acá no da <span className="text-amanecer">el sol</span>
+          </h1>
+          <p className="mt-5 text-white/70">
+            La página que buscás no existe o se movió. Te dejamos algunos atajos para seguir.
           </p>
-          <div className="mx-auto flex max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
-            <Button asChild size="lg" className="h-12 bg-amber-500 font-semibold text-slate-900 hover:bg-amber-600">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <Button asChild variant="sol" size="xl">
               <Link href="/#cursos">
                 Ver cursos
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="h-12 border-white/30 bg-white/5 text-white hover:bg-white/15 hover:text-white"
-            >
+            <Button asChild variant="glass" size="xl">
               <Link href="/">
                 <ArrowLeft className="h-5 w-5" />
                 Volver al inicio

@@ -2,11 +2,11 @@ import { CoursePage } from "@/components/course-page"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Curso Climatizacion Solar Piscinas Argentina | Academia Solar - SolarPower",
-  description: "Aprende a instalar sistemas de calefaccion solar para piscinas. Nicho de alto valor con excelente ROI. 3 semanas 100% online. Cupos gratuitos.",
+  title: "Curso Climatización Solar Piscinas Argentina | Academia Solar - SolarPower",
+  description: "Aprendé a instalar sistemas de calefacción solar para piscinas. Nicho de alto valor con excelente ROI. 3 semanas 100% online. Cupos gratuitos.",
   keywords: "climatizacion solar piscinas, calefaccion solar pileta, colectores solares termicos, calentador solar piscina argentina",
   openGraph: {
-    title: "Climatizacion Solar para Piscinas | Academia Solar",
+    title: "Climatización Solar para Piscinas | Academia Solar",
     description: "3 semanas 100% online. Un nicho en crecimiento con excelente rentabilidad.",
     images: ["/images/course-installer.jpg"],
   },
@@ -16,10 +16,10 @@ export default function ClimatizacionPiscinasPage() {
   return (
     <CoursePage
       slug="climatizacion-piscinas"
-      title="Climatizacion Solar para Piscinas"
+      title="Climatización Solar para Piscinas"
       subtitle="Un nicho en crecimiento con excelente rentabilidad"
-      description="Disena e instala sistemas de calefaccion solar para piscinas residenciales y comerciales. Un nicho de alto valor con excelente retorno de inversion."
-      longDescription="Este curso te especializa en el diseno e instalacion de sistemas de calefaccion solar para piscinas. Aprenderas sobre colectores solares termicos, sistemas de control, y como presupuestar y vender este servicio de alto valor. Incluye calculadora de dimensionado para piscinas."
+      description="Diseñá e instala sistemas de calefacción solar para piscinas residenciales y comerciales. Un nicho de alto valor con excelente retorno de inversión."
+      longDescription="Este curso te especializa en el diseño e instalación de sistemas de calefacción solar para piscinas. Aprenderas sobre colectores solares termicos, sistemas de control, y como presupuestar y vender este servicio de alto valor. Incluye calculadora de dimensionado para piscinas."
       duration="3 semanas"
       modality="100% Online"
       level="Principiante"
@@ -27,55 +27,55 @@ export default function ClimatizacionPiscinasPage() {
       features={[
         "Colectores solares termicos vs paneles fotovoltaicos",
         "Dimensionado de sistemas para piscinas residenciales y comerciales",
-        "Instalacion de colectores, bombas y valvulas",
-        "Controladores de temperatura y automatizacion",
-        "Mantenimiento estacional y diagnostico",
+        "Instalación de colectores, bombas y valvulas",
+        "Controladores de temperatura y automatización",
+        "Mantenimiento estacional y diagnóstico",
         "Materiales y proveedores en Argentina",
-        "Como presupuestar y vender este servicio",
+        "Cómo presupuestar y vender este servicio",
       ]}
       requirements={[
-        "Conocimientos basicos de sistemas solares",
+        "Conocimientos básicos de sistemas solares",
         "Interes en el nicho de piscinas",
       ]}
       modules={[
         {
-          title: "Fundamentos de Climatizacion Solar",
-          description: "Tecnologias y principios basicos",
+          title: "Fundamentos de Climatización Solar",
+          description: "Tecnologías y principios básicos",
           lessons: [
             "Colectores solares termicos: tipos y funcionamiento",
-            "Comparacion con calefaccion electrica y gas",
-            "Cuando usar solar termico vs fotovoltaico",
-            "El mercado de climatizacion de piscinas en Argentina",
+            "Comparación con calefacción eléctrica y gas",
+            "Cuándo usar solar térmico vs fotovoltaico",
+            "El mercado de climatización de piscinas en Argentina",
           ],
         },
         {
           title: "Dimensionamiento de Sistemas",
-          description: "Calculo para piscinas de todo tamano",
+          description: "Cálculo para piscinas de todo tamaño",
           lessons: [
             "Factores que afectan la temperatura de la piscina",
-            "Calculo de perdida de calor",
+            "Cálculo de perdida de calor",
             "Dimensionado de colectores solares",
             "Uso de la calculadora de dimensionado",
           ],
         },
         {
-          title: "Instalacion y Equipos",
-          description: "Practica de instalacion",
+          title: "Instalación y Equipos",
+          description: "Práctica de instalación",
           lessons: [
-            "Seleccion e instalacion de colectores",
-            "Bombas de circulacion y valvulas",
+            "Selección e instalación de colectores",
+            "Bombas de circulación y valvulas",
             "Controladores de temperatura",
-            "Integracion con sistemas de filtrado existentes",
+            "Integración con sistemas de filtrado existentes",
           ],
         },
         {
-          title: "Comercializacion y Mantenimiento",
+          title: "Comercialización y Mantenimiento",
           description: "Vender y mantener sistemas",
           lessons: [
-            "Como presupuestar climatizacion solar",
+            "Cómo presupuestar climatización solar",
             "Argumentos de venta y ROI",
             "Mantenimiento estacional",
-            "Examen final y certificacion",
+            "Examen final y certificación",
           ],
         },
       ]}

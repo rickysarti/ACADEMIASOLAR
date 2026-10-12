@@ -1,33 +1,37 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Inter, Bricolage_Grotesque } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { JsonLd } from '@/components/json-ld'
+import { CONTACT_EMAIL, SITE_URL } from '@/lib/site'
 import './globals.css'
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: '--font-inter'
-});
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ["latin"],
-  variable: '--font-space-grotesk'
-});
+const display = Bricolage_Grotesque({
+  subsets: ['latin'],
+  variable: '--font-display-face',
+})
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#0f172a',
+  themeColor: '#0b1324',
 }
 
 export const metadata: Metadata = {
-  title: 'Academia Solar | Cursos de Energia Solar en Argentina - SolarPower',
-  description: 'Formacion profesional en energia solar con practicas reales en instalaciones de SolarPower Argentina. Cursos de Instalador Solar, Analista Solar, Vendedor Solar y Diplomatura Integral. Cupos gratuitos disponibles. La mejor salida laboral del mercado solar.',
-  keywords: 'cursos energia solar argentina, instalador solar certificado, capacitacion paneles solares, formacion energia renovable, cursos gratis energia solar, empleo energia solar, solarpower argentina, academia solar',
-  authors: [{ name: 'SolarPower Argentina', url: 'https://www.solarpower.com.ar' }],
-  creator: 'SolarPower Argentina',
+  title: 'Academia Solar | Cursos de Energía Solar en Argentina',
+  description:
+    'Formación profesional en energía solar con prácticas reales en obras de SolarPower Argentina. Cursos de Instalador Solar, Analista Solar, Vendedor Solar y Diplomatura Integral. Cupos gratuitos disponibles.',
+  keywords:
+    'cursos energia solar argentina, instalador solar certificado, capacitacion paneles solares, formacion energia renovable, cursos gratis energia solar, empleo energia solar, solarpower argentina, academia solar',
+  authors: [{ name: 'Academia Solar', url: SITE_URL }],
+  creator: 'Academia Solar',
   publisher: 'Academia Solar',
-  metadataBase: new URL('https://www.academiasolar.com.ar'),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: '/',
     types: {
@@ -35,26 +39,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Academia Solar | Cursos de Energia Solar en Argentina',
-    description: 'Formacion profesional en energia solar con practicas reales y la mejor salida laboral. Cupos gratuitos disponibles.',
-    url: 'https://www.academiasolar.com.ar',
-    siteName: 'Academia Solar - SolarPower Argentina',
+    title: 'Academia Solar | Cursos de Energía Solar en Argentina',
+    description:
+      'Formación en energía solar con prácticas reales y la mejor salida laboral. Cupos gratuitos disponibles.',
+    url: SITE_URL,
+    siteName: 'Academia Solar',
     locale: 'es_AR',
     type: 'website',
-    images: [
-      {
-        url: '/images/hero-solar-installation.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Academia Solar - Formacion en Energia Solar',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Academia Solar | Cursos de Energia Solar en Argentina',
-    description: 'Formacion profesional en energia solar con practicas reales y la mejor salida laboral.',
-    images: ['/images/hero-solar-installation.jpg'],
+    title: 'Academia Solar | Cursos de Energía Solar en Argentina',
+    description: 'Formación en energía solar con prácticas reales y la mejor salida laboral.',
   },
   robots: {
     index: true,
@@ -67,12 +63,17 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: [
-      { url: '/favicon.png', type: 'image/png' },
-    ],
-    apple: '/favicon.png',
-  },
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: 'Academia Solar',
+  url: SITE_URL,
+  logo: `${SITE_URL}/brand/academia-solar-logo.png`,
+  email: CONTACT_EMAIL,
+  address: { '@type': 'PostalAddress', addressLocality: 'Buenos Aires', addressCountry: 'AR' },
+  parentOrganization: { '@type': 'Organization', name: 'SolarPower Argentina', url: 'https://www.solarpower.com.ar' },
 }
 
 export default function RootLayout({
@@ -81,8 +82,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+    <html lang="es-AR">
+      <body className={`${inter.variable} ${display.variable} font-sans antialiased`}>
+        <JsonLd data={organizationJsonLd} />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

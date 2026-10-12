@@ -19,11 +19,19 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
+        // Variantes de marca Academia Solar
+        sol: 'btn-electric rounded-full bg-sol-500 text-ink-950 font-semibold shadow-lg shadow-sol-500/25 hover:bg-sol-400 hover:shadow-sol-400/40',
+        ink: 'rounded-full bg-ink-950 text-white font-semibold hover:bg-ink-800',
+        glass:
+          'btn-electric-ghost rounded-full border border-white/25 bg-white/10 text-white font-semibold backdrop-blur-sm hover:bg-white/20',
+        line: 'rounded-full border-2 border-ink-950/15 bg-transparent text-ink-950 font-semibold hover:border-ink-950/40 hover:bg-white',
+        verde: 'rounded-full bg-verde-600 text-white font-semibold hover:bg-verde-700',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
         sm: 'h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5',
         lg: 'h-10 rounded-md px-6 has-[>svg]:px-4',
+        xl: 'h-12 px-6 text-base has-[>svg]:px-5 sm:h-13 sm:px-7',
         icon: 'size-9',
         'icon-sm': 'size-8',
         'icon-lg': 'size-10',
