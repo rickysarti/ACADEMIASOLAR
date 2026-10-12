@@ -28,7 +28,7 @@ export const mainCourses: CourseSummary[] = [
     title: "Instalador Solar",
     subtitle: "Certificación profesional",
     description:
-      "Dominá la instalación de sistemas fotovoltaicos residenciales y comerciales con prácticas en obras reales.",
+      "Dominá la instalación de sistemas fotovoltaicos residenciales y comerciales con práctica en terreno y laboratorio.",
     duration: "12 semanas",
     modality: "Híbrido",
     image: "/images/course-installer.jpg",

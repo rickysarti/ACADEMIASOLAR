@@ -1,25 +1,22 @@
-import Link from "next/link"
 import Image from "next/image"
-import { ArrowUpRight, Building2, HardHat, MapPinned } from "lucide-react"
+import { Building2, FlaskConical, MapPinned } from "lucide-react"
 import { Eyebrow } from "@/components/brand/section"
 
 const facts = [
   {
-    icon: HardHat,
-    title: "Obras activas para practicar",
-    text: "Las prácticas se hacen en instalaciones reales de SolarPower, no en maquetas ni simuladores.",
+    icon: FlaskConical,
+    title: "Laboratorios de pruebas",
+    text: "Practicás con paneles, inversores y baterías en nuestros laboratorios, no en simuladores.",
+  },
+  {
+    icon: MapPinned,
+    title: "Jornadas en terreno",
+    text: "Salís a terreno con supervisión de instaladores experimentados para aplicar lo que aprendiste.",
   },
   {
     icon: Building2,
     title: "Docentes que trabajan en el sector",
-    text: "Las clases las da el equipo de SolarPower Argentina: gente que diseña, vende e instala todos los días.",
-  },
-  {
-    icon: MapPinned,
-    title: "Instalaciones que podés ver",
-    text: "Conocé dónde trabaja SolarPower en el mapa público de instalaciones.",
-    href: "https://www.solarpower.com.ar/mapa-instalaciones",
-    cta: "Ver mapa de instalaciones",
+    text: "Las clases las da el equipo de SolarPower Argentina: gente que diseña, vende e instala sistemas solares.",
   },
 ]
 
@@ -49,11 +46,11 @@ export function Backing() {
           <div className="order-1 lg:order-2">
             <Eyebrow>Respaldo real</Eyebrow>
             <h2 className="mt-3 text-[2rem] font-bold leading-[1.08] text-ink-950 sm:text-4xl lg:text-[3.25rem]">
-              Detrás de la academia hay una empresa que instala todos los días
+              Detrás de la academia hay una empresa solar de verdad
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-ink-700">
-              Academia Solar es la unidad de formación de SolarPower Argentina. Lo que enseñamos es lo que
-              hacemos en cada obra.
+              Academia Solar es la unidad de formación de SolarPower Argentina. Lo que enseñamos sale de la
+              experiencia de cada proyecto que diseñamos e instalamos.
             </p>
 
             <ul className="mt-8 grid gap-5">
@@ -65,17 +62,6 @@ export function Backing() {
                   <div>
                     <h3 className="text-lg font-bold text-ink-950">{fact.title}</h3>
                     <p className="mt-1 text-ink-700">{fact.text}</p>
-                    {fact.href && (
-                      <Link
-                        href={fact.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 inline-flex items-center gap-1 font-semibold text-verde-700 underline-offset-4 hover:underline"
-                      >
-                        {fact.cta}
-                        <ArrowUpRight className="h-4 w-4" />
-                      </Link>
-                    )}
                   </div>
                 </li>
               ))}

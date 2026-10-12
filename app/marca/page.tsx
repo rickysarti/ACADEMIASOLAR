@@ -26,7 +26,7 @@ const colors = [
 const principles = [
   {
     title: "Práctico antes que pretencioso",
-    text: "Hablamos como alguien que está arriba del techo: claro, directo y con voseo argentino.",
+    text: "Hablamos como alguien que trabaja en terreno: claro, directo y con voseo argentino.",
   },
   {
     title: "Honesto siempre",
@@ -144,7 +144,7 @@ export default function MarcaPage() {
             <div className="rounded-3xl bg-white p-7 ring-1 ring-ink-950/8">
               <p className="text-sm font-semibold text-sol-700">Títulos y logo</p>
               <p className="mt-3 font-display text-5xl font-extrabold tracking-tight text-ink-950">Bricolage Grotesque</p>
-              <p className="mt-4 font-display text-2xl text-ink-700">Aa Bb Cc 0123 — Aprendé en el techo.</p>
+              <p className="mt-4 font-display text-2xl text-ink-700">Aa Bb Cc 0123 — Aprendé en terreno.</p>
             </div>
             <div className="rounded-3xl bg-white p-7 ring-1 ring-ink-950/8">
               <p className="text-sm font-semibold text-sol-700">Textos e interfaz · fuente propia</p>

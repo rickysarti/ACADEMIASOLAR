@@ -36,7 +36,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Academia Solar | Cursos de Energía Solar en Argentina',
   description:
-    'Formación profesional en energía solar con prácticas reales en obras de SolarPower Argentina. Cursos de Instalador Solar, Analista Solar, Vendedor Solar y Diplomatura Integral. Cupos gratuitos disponibles.',
+    'Formación profesional en energía solar con práctica en terreno y en los laboratorios de pruebas de SolarPower Argentina. Cursos de Instalador Solar, Analista Solar, Vendedor Solar y Diplomatura Integral. Cupos gratuitos disponibles.',
   keywords:
     'cursos energia solar argentina, instalador solar certificado, capacitacion paneles solares, formacion energia renovable, cursos gratis energia solar, empleo energia solar, solarpower argentina, academia solar',
   authors: [{ name: 'Academia Solar', url: SITE_URL }],

@@ -4,11 +4,11 @@ Plataforma educativa de energia solar de SolarPower Argentina.
 
 ## Descripcion
 
-Academia Solar es la division educativa de SolarPower Argentina, empresa lider en energia solar fotovoltaica. Ofrecemos formacion profesional con practicas reales en instalaciones activas y la mejor salida laboral del mercado solar argentino.
+Academia Solar es la division educativa de SolarPower Argentina, empresa lider en energia solar fotovoltaica. Ofrecemos formacion profesional con practica en terreno y en laboratorios de pruebas, y la mejor salida laboral del mercado solar argentino.
 
 ## Caracteristicas Principales
 
-- **Practicas Reales**: En instalaciones activas de SolarPower
+- **Practica en terreno y laboratorio**: Laboratorios de pruebas de SolarPower y jornadas en terreno
 - **IA Incluida**: Todos los cursos incluyen modulos de Inteligencia Artificial
 - **Cupos Gratuitos**: Disponibles en todos los programas
 - **Certificaciones**: CAIM para instaladores

@@ -220,7 +220,7 @@ export default async function BlogPostPage({
               <LogoMark tone="light" className="mx-auto h-12 w-12" />
               <h2 className="mt-4 text-2xl font-extrabold sm:text-3xl">¿Te interesa formarte en energía solar?</h2>
               <p className="mx-auto mt-3 max-w-xl text-white/75">
-                Conocé nuestros cursos con prácticas reales en instalaciones de SolarPower Argentina.
+                Conocé nuestros cursos con práctica en terreno y en nuestros laboratorios de pruebas.
               </p>
               <Button asChild variant="sol" size="xl" className="mt-6 w-full sm:w-auto">
                 <Link href="/cursos/introduccion">

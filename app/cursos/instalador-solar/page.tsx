@@ -3,11 +3,11 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Curso Instalador Solar Certificado Argentina | Academia Solar - SolarPower",
-  description: "Convertite en instalador solar profesional con el curso más completo de Argentina. Prácticas reales en instalaciones de SolarPower, certificación CAIM incluida. Cupos gratuitos disponibles. 12 semanas híbrido.",
+  description: "Convertite en instalador solar profesional con el curso más completo de Argentina. Práctica en terreno y en laboratorio, certificación CAIM incluida. Cupos gratuitos disponibles. 12 semanas híbrido.",
   keywords: "curso instalador solar, instalador paneles solares argentina, certificacion CAIM, capacitacion instalacion solar, curso energia solar presencial",
   openGraph: {
     title: "Curso Instalador Solar Certificado | Academia Solar",
-    description: "12 semanas de formación con prácticas reales en obra. Certificación CAIM incluida.",
+    description: "12 semanas de formación con práctica en terreno y laboratorio. Certificación CAIM incluida.",
     images: ["/images/course-installer.jpg"],
   },
 }
@@ -18,8 +18,8 @@ export default function InstaladorSolarPage() {
       slug="instalador-solar"
       title="Instalador Solar Certificado"
       subtitle="El programa más completo del mercado argentino"
-      description="Convertite en instalador solar profesional con prácticas en instalaciones reales de SolarPower. Salí con experiencia en obra real y acceso directo a la red de instaladores más grande de Argentina."
-      longDescription="El programa de Instalador Solar Certificado combina clases online con prácticas presenciales en instalaciones reales de SolarPower. A diferencia de cursos puramente teóricos, nuestros alumnos salen con experiencia en obra real y acceso directo a la red de instaladores más grande de Argentina. Incluye certificación ante CAIM, comunidad privada de graduados y material descargable."
+      description="Convertite en instalador solar profesional con práctica en terreno y en nuestros laboratorios de pruebas. Salí con experiencia práctica y acceso directo a la red de instaladores más grande de Argentina."
+      longDescription="El programa de Instalador Solar Certificado combina clases online con prácticas presenciales en terreno y en nuestros laboratorios de pruebas. A diferencia de cursos puramente teóricos, nuestros alumnos salen con experiencia práctica y acceso directo a la red de instaladores más grande de Argentina. Incluye certificación ante CAIM, comunidad privada de graduados y material descargable."
       duration="12 semanas"
       modality="Híbrido (online + presencial)"
       level="Principiante"
@@ -32,7 +32,7 @@ export default function InstaladorSolarPage() {
         "Certificarte ante CAIM",
         "Calcular y dimensionar sistemas fotovoltaicos",
         "Realizar mantenimiento preventivo y correctivo",
-        "2 jornadas de práctica presencial en instalaciones reales",
+        "2 jornadas de práctica presencial en terreno y laboratorio",
       ]}
       requirements={[
         "Conocimientos básicos de electricidad",
@@ -68,7 +68,7 @@ export default function InstaladorSolarPage() {
         },
         {
           title: "Instalación Práctica",
-          description: "Procedimientos, seguridad y trabajo en obra",
+          description: "Procedimientos, seguridad y trabajo en terreno",
           lessons: [
             "Seguridad eléctrica en instalaciones fotovoltaicas (35 min)",
             "Lectura de planos y diagramas unifilares (40 min)",

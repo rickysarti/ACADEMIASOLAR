@@ -48,7 +48,7 @@ export function Footer() {
               <Logo tone="light" />
             </Link>
             <p className="mt-5 max-w-sm text-white/65">
-              Escuela de energía solar de SolarPower Argentina. Formación con prácticas en obras reales, IA
+              Escuela de energía solar de SolarPower Argentina. Formación con práctica en terreno y laboratorio, IA
               aplicada y conexión con el sector.
             </p>
             <div className="mt-6 space-y-1.5 text-sm">

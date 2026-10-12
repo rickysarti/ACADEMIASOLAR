@@ -36,7 +36,7 @@ export function Benefits() {
               Más que un curso: <span className="text-sol-600">una puerta al sector</span>
             </>
           }
-          lead="Somos parte de SolarPower Argentina. Eso se traduce en obras reales para practicar, tecnología actual y contactos de trabajo."
+          lead="Somos parte de SolarPower Argentina. Eso se traduce en laboratorios de pruebas para practicar, salidas a terreno, tecnología actual y contactos de trabajo."
         />
 
         <div className="mt-12 grid gap-4 lg:auto-rows-fr sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">

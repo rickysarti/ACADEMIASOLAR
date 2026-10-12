@@ -70,7 +70,7 @@ export default function SolarAgroPage() {
         },
         {
           title: "Casos Prácticos",
-          description: "Instalaciones reales en Argentina",
+          description: "Casos de estudio en Argentina",
           lessons: [
             "Caso 1: Tambo con bombeo y electrificación",
             "Caso 2: Establecimiento ganadero 50kW",

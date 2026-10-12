@@ -1,12 +1,12 @@
 import Image from "next/image"
-import { Cpu, HardHat, Network } from "lucide-react"
+import { Cpu, FlaskConical, Network } from "lucide-react"
 import { SectionHeader } from "@/components/brand/section"
 
 const pillars = [
   {
-    icon: HardHat,
-    title: "Práctica en obras reales",
-    text: "Trabajás en instalaciones activas de SolarPower, con clientes reales y supervisión de instaladores experimentados.",
+    icon: FlaskConical,
+    title: "Laboratorio y terreno",
+    text: "Practicás con paneles, inversores y baterías en nuestros laboratorios de pruebas y salís a terreno con supervisión de instaladores experimentados.",
     color: "bg-sol-100 text-sol-700",
   },
   {
@@ -34,13 +34,13 @@ export function WhyChoose() {
               <>
                 Teoría online.
                 <br />
-                <span className="text-sol-600">Oficio en el techo.</span>
+                <span className="text-sol-600">Práctica en terreno.</span>
               </>
             }
           />
           <p className="text-lg leading-relaxed text-ink-700 lg:pb-2">
-            La diferencia es simple: además de estudiar, salís a instalar paneles de verdad. Aprendés el
-            oficio como se aprende en serio, al lado de quienes lo hacen todos los días.
+            La diferencia es simple: además de estudiar, ponés las manos en los equipos. Practicás en
+            nuestros laboratorios de pruebas y en terreno, al lado de quienes hacen esto todos los días.
           </p>
         </div>
 

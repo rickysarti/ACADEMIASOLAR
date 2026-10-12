@@ -14,7 +14,7 @@ const steps = [
   },
   {
     title: "Estudiá y practicá",
-    text: "Clases online a tu ritmo, módulos de IA y jornadas de práctica en obras reales de SolarPower.",
+    text: "Clases online a tu ritmo, módulos de IA y jornadas de práctica en terreno y en nuestros laboratorios de pruebas.",
   },
   {
     title: "Certificate y trabajá",

@@ -11,7 +11,7 @@ import {
   Clock,
   Cpu,
   Gift,
-  HardHat,
+  FlaskConical,
   MessageCircle,
   PlayCircle,
   Users,
@@ -48,7 +48,7 @@ interface CoursePageProps {
 
 const includes = [
   { icon: Award, label: "Certificado" },
-  { icon: HardHat, label: "Casos reales" },
+  { icon: FlaskConical, label: "Laboratorio" },
   { icon: Cpu, label: "Módulo de IA" },
   { icon: Users, label: "Red SolarPower" },
 ]
@@ -161,9 +161,9 @@ export function CoursePage({
             <div className="absolute -bottom-5 -left-6 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-ink-950 shadow-2xl">
               <LogoMark className="h-9 w-9" />
               <span className="text-sm font-semibold leading-tight">
-                Formación con
+                Terreno y
                 <br />
-                práctica real
+                laboratorio
               </span>
             </div>
           </div>

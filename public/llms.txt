@@ -1,8 +1,8 @@
 # Academia Solar - SolarPower Argentina
 
-> Formacion profesional en energia solar con practicas reales y la mejor salida laboral de Argentina.
+> Formacion profesional en energia solar con practica en terreno y laboratorio, y la mejor salida laboral de Argentina.
 
-Academia Solar es la division educativa de SolarPower Argentina, empresa lider en energia solar fotovoltaica. Ofrecemos cursos certificados con practicas en instalaciones reales y acceso directo al mercado laboral.
+Academia Solar es la division educativa de SolarPower Argentina, empresa lider en energia solar fotovoltaica. Ofrecemos cursos certificados con practica en terreno y en laboratorios de pruebas, y acceso directo al mercado laboral.
 
 ## Informacion General
 
@@ -35,7 +35,7 @@ Academia Solar es la division educativa de SolarPower Argentina, empresa lider e
    - Modalidad: Hibrido (online + practicas presenciales)
    - Certificacion: CAIM incluida
    - URL: /cursos/instalador-solar
-   - Incluye: Practicas en obra real, herramientas, EPP
+   - Incluye: Practicas en terreno y en laboratorio, herramientas, EPP
 
 3. **Analista Solar - Disenador de Sistemas**
    - Duracion: 8 semanas
@@ -54,7 +54,7 @@ Academia Solar es la division educativa de SolarPower Argentina, empresa lider e
    - Duracion: 6 meses
    - Modalidad: Hibrido
    - URL: /cursos/diplomatura-integral
-   - Incluye: Los 3 tracks completos + proyecto final en obra real
+   - Incluye: Los 3 tracks completos + proyecto final en terreno
 
 ### Cursos Cortos / Especializaciones
 
@@ -66,7 +66,7 @@ Academia Solar es la division educativa de SolarPower Argentina, empresa lider e
 
 ## Diferenciadores Clave
 
-1. **Practicas Reales**: Todas las practicas se realizan en instalaciones activas de SolarPower
+1. **Practica en terreno y laboratorio**: Las practicas combinan los laboratorios de pruebas de SolarPower con jornadas en terreno
 2. **IA Incluida**: Todos los cursos incluyen modulos de Inteligencia Artificial para el sector
 3. **Red SolarPower**: Acceso a la red de profesionales y empresas del grupo
 4. **Cupos Gratuitos**: Todos los programas ofrecen cupos gratuitos para los primeros inscriptos

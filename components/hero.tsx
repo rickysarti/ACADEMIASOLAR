@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Check, Cpu, HardHat } from "lucide-react"
+import { ArrowRight, Check, Cpu, FlaskConical } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Eyebrow } from "@/components/brand/section"
 
 const roles = ["Instalador", "Diseñador", "Vendedor", "Analista"]
 
-const proofs = ["Cupos gratuitos", "Prácticas en obras reales", "IA en todos los cursos"]
+const proofs = ["Cupos gratuitos", "Práctica en terreno y laboratorio", "IA en todos los cursos"]
 
 export function Hero() {
   const [currentRole, setCurrentRole] = useState(0)
@@ -64,8 +64,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl">
-            Argentina necesita miles de profesionales solares. Te formamos con prácticas en obras reales
-            de SolarPower, herramientas de IA y acceso a la red de trabajo del sector.
+            Argentina necesita miles de profesionales solares. Te formamos con práctica en terreno y en nuestros
+            laboratorios de pruebas, herramientas de IA y acceso a la red de trabajo del sector.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -98,7 +98,7 @@ export function Hero() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-white/15 sm:aspect-[5/6]">
             <Image
               src="/images/hero-solar-installation.jpg"
-              alt="Equipo instalando paneles solares sobre un techo en Buenos Aires"
+              alt="Equipo de SolarPower instalando paneles solares en Buenos Aires"
               fill
               priority
               sizes="(max-width: 1024px) 90vw, 45vw"
@@ -106,19 +106,19 @@ export function Hero() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
             <div className="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5">
-              <p className="font-display text-lg font-bold leading-tight sm:text-xl">No aprendés en un aula.</p>
-              <p className="font-display text-lg font-bold leading-tight text-sol-300 sm:text-xl">Aprendés en el techo.</p>
+              <p className="font-display text-lg font-bold leading-tight sm:text-xl">No aprendés solo en un aula.</p>
+              <p className="font-display text-lg font-bold leading-tight text-sol-300 sm:text-xl">Practicás en terreno.</p>
             </div>
           </div>
 
           <div className="absolute -left-3 top-8 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-ink-950 shadow-2xl sm:-left-8">
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sol-100">
-              <HardHat className="h-5 w-5 text-sol-700" />
+              <FlaskConical className="h-5 w-5 text-sol-700" />
             </span>
             <span className="text-sm font-semibold leading-tight">
-              Práctica en
+              Laboratorio
               <br />
-              obra real
+              de pruebas
             </span>
           </div>
           <div className="absolute -right-3 top-1/2 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-ink-950 shadow-2xl sm:-right-6">

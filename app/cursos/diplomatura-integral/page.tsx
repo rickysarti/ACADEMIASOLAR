@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Diplomatura Integral Energía Solar Argentina | Academia Solar - SolarPower",
-  description: "El programa más completo del mercado argentino. Formación 360 en instalación, diseño y ventas de energía solar. 6 meses, 4 jornadas presenciales, proyecto en obra real. Cupos gratuitos disponibles.",
+  description: "El programa más completo del mercado argentino. Formación 360 en instalación, diseño y ventas de energía solar. 6 meses, 4 jornadas presenciales, proyecto final en terreno. Cupos gratuitos disponibles.",
   keywords: "diplomatura energia solar, formacion completa energia solar argentina, carrera energia solar, profesional solar certificado, mejor curso energia solar",
   openGraph: {
     title: "Diplomatura Integral en Energía Solar | Academia Solar",
@@ -19,7 +19,7 @@ export default function DiplomaturaIntegralPage() {
       title="Diplomatura Integral en Energía Solar"
       subtitle="El perfil más completo y cotizado del sector"
       description="El programa más completo de Academia Solar. Formación 360 grados que combina instalación, diseño y ventas para convertirte en el profesional más cotizado del mercado solar argentino."
-      longDescription="La Diplomatura Integral está diseñada para quienes quieren dominar todos los aspectos de la industria solar: desde la instalación física hasta el diseño técnico y la comercialización. Al completarla, sos el perfil más completo y cotizado del sector. Incluye los 3 tracks completos, 4 jornadas presenciales, proyecto final en obra real, y mentoria 1:1 con el equipo directivo de SolarPower."
+      longDescription="La Diplomatura Integral está diseñada para quienes quieren dominar todos los aspectos de la industria solar: desde la instalación física hasta el diseño técnico y la comercialización. Al completarla, sos el perfil más completo y cotizado del sector. Incluye los 3 tracks completos, 4 jornadas presenciales, proyecto final en terreno, y mentoria 1:1 con el equipo directivo de SolarPower."
       duration="6 meses"
       modality="Híbrido (online + presencial)"
       level="Intermedio"
@@ -78,7 +78,7 @@ export default function DiplomaturaIntegralPage() {
             "Selección de proyecto real con cliente SolarPower",
             "Diseño técnico completo del sistema",
             "Propuesta comercial profesional",
-            "Instalación supervisada en obra",
+            "Instalación supervisada en terreno",
             "Presentación final y defensa ante jurado",
             "Entrega de Diploma de Honor Academia Solar",
           ],

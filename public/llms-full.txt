@@ -2,7 +2,7 @@
 
 ## Resumen Ejecutivo
 
-Academia Solar es la plataforma educativa de SolarPower Argentina, disenada para formar profesionales en energia solar fotovoltaica. Combina teoria online con practicas reales en instalaciones activas, ofreciendo la mejor salida laboral del sector.
+Academia Solar es la plataforma educativa de SolarPower Argentina, disenada para formar profesionales en energia solar fotovoltaica. Combina teoria online con practica en terreno y en laboratorios de pruebas, ofreciendo la mejor salida laboral del sector.
 
 ---
 
@@ -54,7 +54,7 @@ Academia Solar es la plataforma educativa de SolarPower Argentina, disenada para
   - Instalacion paso a paso
   - Seguridad electrica y trabajo en altura
   - Puesta en marcha y mantenimiento
-  - Practicas en instalaciones reales de SolarPower
+  - Practicas en terreno y en laboratorios de pruebas de SolarPower
 - **Incluye**: EPP, herramientas para practicas, almuerzo en jornadas
 - **Salida laboral**: Instalador en empresas solares, autonomo
 - **URL**: /cursos/instalador-solar
@@ -94,7 +94,7 @@ Academia Solar es la plataforma educativa de SolarPower Argentina, disenada para
   - Instalador Solar Certificado
   - Analista Solar
   - Vendedor Solar
-  - Proyecto final en obra real
+  - Proyecto final en terreno
   - Mentoria con equipo directivo SolarPower
 - **Certificacion**: Triple certificacion
 - **Salida laboral**: Perfil 360 - el mas cotizado del sector
@@ -137,8 +137,8 @@ Academia Solar es la plataforma educativa de SolarPower Argentina, disenada para
 
 ## Seccion 3: Diferenciadores
 
-### 3.1 Practicas Reales
-A diferencia de otras academias, las practicas se realizan en instalaciones activas de SolarPower Argentina, no en simuladores o maquetas.
+### 3.1 Practica en terreno y laboratorio
+Las practicas combinan los laboratorios de pruebas de SolarPower Argentina, donde se trabaja con paneles, inversores y baterias, con jornadas en terreno supervisadas. No se usan simuladores.
 
 ### 3.2 Capacitacion en IA
 Todos los cursos incluyen modulos de Inteligencia Artificial aplicada:

@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "¿Qué diferencia a Academia Solar de otros cursos de energía solar?",
     answer:
-      "Tres cosas: prácticas en instalaciones reales de SolarPower con clientes finales (no simulaciones), acceso a la red de instaladores y vendedores de SolarPower, y módulos de inteligencia artificial aplicada al trabajo solar en todos los cursos.",
+      "Tres cosas: práctica en terreno y en nuestros laboratorios de pruebas con equipos reales (no simulaciones), acceso a la red de instaladores y vendedores de SolarPower, y módulos de inteligencia artificial aplicada al trabajo solar en todos los cursos.",
   },
   {
     question: "¿Necesito conocimientos previos?",
@@ -18,9 +18,9 @@ const faqs = [
       "Para Instalador Solar recomendamos tener nociones básicas de electricidad. Si no las tenés, podés hacer antes el curso de Electricidad Básica para Solar (4 semanas, online). Analista Solar y Vendedor Solar no requieren conocimientos técnicos previos.",
   },
   {
-    question: "¿Cómo funcionan las prácticas en instalaciones reales?",
+    question: "¿Cómo funcionan las prácticas?",
     answer:
-      "Se realizan en obras activas de SolarPower, con supervisión de instaladores experimentados. Participás en proyectos residenciales y comerciales reales, desde el relevamiento hasta la puesta en marcha, y sumás experiencia comprobable para tu CV.",
+      "Combinan nuestros laboratorios de pruebas, donde trabajás con paneles, inversores y baterías, con jornadas en terreno supervisadas por instaladores experimentados. Recorrés todo el proceso, desde el relevamiento hasta la puesta en marcha, y sumás experiencia comprobable para tu CV.",
   },
   {
     question: "¿Qué pasa si no apruebo el examen de certificación?",
