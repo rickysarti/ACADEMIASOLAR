@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function AnalistaSolarPage() {
   return (
     <CoursePage
+      slug="analista-solar"
       title="Analista Solar - Disenador de Sistemas"
       subtitle="El experto tecnico-comercial que toda empresa necesita"
       description="Aprende a disenar y simular sistemas solares con PVSyst, Aurora Solar y Helioscope. El curso 100% online mas completo para analistas solares en Argentina."

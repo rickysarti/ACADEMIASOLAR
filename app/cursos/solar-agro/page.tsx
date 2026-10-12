@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function SolarAgroPage() {
   return (
     <CoursePage
+      slug="solar-agro"
       title="Solar para el Agro"
       subtitle="Especializacion en energia solar rural"
       description="Especializate en sistemas solares para el sector agropecuario: bombeo solar, riego, electrificacion rural y generacion distribuida para establecimientos."

@@ -131,29 +131,29 @@ export default async function BlogPostPage({
   }
 
   return (
-    <article className="pb-24">
+    <article className="pb-16 sm:pb-24">
       <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
 
       {/* Header */}
-      <header className="bg-foreground text-background py-12 lg:py-16">
-        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+      <header className="bg-slate-900 text-white pt-8 pb-16 sm:pt-12 lg:pt-16 lg:pb-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Breadcrumb className="mb-6">
-            <BreadcrumbList className="text-background/60">
+            <BreadcrumbList className="text-white/60 flex-nowrap">
               <BreadcrumbItem>
-                <BreadcrumbLink asChild className="hover:text-background">
+                <BreadcrumbLink asChild className="hover:text-white">
                   <Link href="/">Inicio</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink asChild className="hover:text-background">
+                <BreadcrumbLink asChild className="hover:text-white">
                   <Link href="/blog">Blog</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="text-background/80 line-clamp-1">
+              <BreadcrumbItem className="min-w-0">
+                <BreadcrumbPage className="text-white/80 line-clamp-1 min-w-0">
                   {post.titulo}
                 </BreadcrumbPage>
               </BreadcrumbItem>
@@ -166,15 +166,15 @@ export default async function BlogPostPage({
             </Badge>
           )}
 
-          <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-balance">
+          <h1 className="font-heading text-[1.75rem] leading-tight sm:text-4xl lg:text-5xl font-bold mb-4 text-balance">
             {post.titulo}
           </h1>
 
           {post.subtitulo && (
-            <p className="text-background/70 text-lg mb-6 text-pretty">{post.subtitulo}</p>
+            <p className="text-white/70 text-base sm:text-lg mb-6 text-pretty">{post.subtitulo}</p>
           )}
 
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-background/60">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-white/60">
             <span className="flex items-center gap-1.5">
               <User className="w-4 h-4" />
               {post.autor}
@@ -195,9 +195,9 @@ export default async function BlogPostPage({
         </div>
       </header>
 
-      <div className="mx-auto max-w-3xl px-4 lg:px-8">
-        {post.imagen_destacada_url && (
-          <div className="relative aspect-[16/9] -mt-10 lg:-mt-14 mb-10 rounded-2xl overflow-hidden shadow-xl">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        {post.imagen_destacada_url ? (
+          <div className="relative aspect-[16/9] -mt-10 lg:-mt-14 mb-8 sm:mb-10 rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={post.imagen_destacada_url}
               alt={post.titulo}
@@ -207,15 +207,17 @@ export default async function BlogPostPage({
               sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>
+        ) : (
+          <div className="h-10 sm:h-14" />
         )}
 
         {/* Contenido */}
-        <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-heading prose-a:text-primary">
+        <div className="prose prose-neutral prose-base sm:prose-lg max-w-none break-words prose-headings:font-heading prose-headings:scroll-mt-24 prose-a:text-amber-700 prose-a:underline-offset-2 prose-img:rounded-xl prose-table:block prose-table:overflow-x-auto prose-table:whitespace-nowrap sm:prose-table:whitespace-normal">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.contenido}</ReactMarkdown>
         </div>
 
         {/* CTA */}
-        <div className="mt-14 rounded-2xl bg-muted/50 border border-border px-6 py-10 text-center">
+        <div className="mt-12 sm:mt-14 rounded-2xl bg-gradient-to-br from-amber-50 to-green-50 border border-amber-200/60 px-5 py-8 sm:px-6 sm:py-10 text-center">
           <h2 className="font-heading text-2xl font-bold mb-3 text-balance">
             Te interesa formarte en energia solar?
           </h2>
@@ -224,7 +226,7 @@ export default async function BlogPostPage({
           </p>
           <Button
             asChild
-            className="btn-electric bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40"
+            className="btn-electric h-12 w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40"
           >
             <Link href="/cursos/introduccion">
               Empezar Gratis
@@ -237,10 +239,14 @@ export default async function BlogPostPage({
         {relatedPosts.length > 0 && (
           <div className="mt-16">
             <h2 className="font-heading text-xl font-bold mb-6">Mas articulos</h2>
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-3 gap-5 sm:gap-6">
               {relatedPosts.map((related) => (
-                <Link key={related.id} href={`/blog/${related.slug}`} className="group">
-                  <div className="relative aspect-[16/10] rounded-lg overflow-hidden bg-muted mb-3">
+                <Link
+                  key={related.id}
+                  href={`/blog/${related.slug}`}
+                  className="group flex items-center gap-4 sm:block"
+                >
+                  <div className="relative aspect-[16/10] w-28 flex-shrink-0 sm:w-auto rounded-lg overflow-hidden bg-muted sm:mb-3">
                     {related.imagen_destacada_url && (
                       <Image
                         src={related.imagen_destacada_url}
@@ -251,7 +257,7 @@ export default async function BlogPostPage({
                       />
                     )}
                   </div>
-                  <h3 className="text-sm font-semibold leading-snug group-hover:text-primary transition-colors text-balance">
+                  <h3 className="text-sm font-semibold leading-snug group-hover:text-amber-600 transition-colors text-balance">
                     {related.titulo}
                   </h3>
                 </Link>

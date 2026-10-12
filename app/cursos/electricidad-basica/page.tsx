@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function ElectricidadBasicaPage() {
   return (
     <CoursePage
+      slug="electricidad-basica"
       title="Electricidad Basica para Solar"
       subtitle="Los fundamentos que necesitas para empezar"
       description="Domina los fundamentos electricos imprescindibles para trabajar con sistemas fotovoltaicos de forma segura y profesional."

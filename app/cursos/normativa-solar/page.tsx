@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function NormativaSolarPage() {
   return (
     <CoursePage
+      slug="normativa-solar"
       title="Normativa Solar Argentina"
       subtitle="Todo sobre regulacion y tramites"
       description="Conoce toda la regulacion vigente para generacion distribuida en Argentina: Ley 27.424, distribuidoras y tramites ante EDENOR, EDESUR y mas."

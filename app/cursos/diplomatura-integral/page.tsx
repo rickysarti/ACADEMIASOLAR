@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function DiplomaturaIntegralPage() {
   return (
     <CoursePage
+      slug="diplomatura-integral"
       title="Diplomatura Integral en Energia Solar"
       subtitle="El perfil mas completo y cotizado del sector"
       description="El programa mas completo de Academia Solar. Formacion 360 grados que combina instalacion, diseno y ventas para convertirte en el profesional mas cotizado del mercado solar argentino."

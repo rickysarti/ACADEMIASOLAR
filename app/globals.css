@@ -123,9 +123,62 @@
   }
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+  /* Las anclas (#cursos, #faq...) no quedan tapadas por el header fijo */
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-amber-500;
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* El efecto eléctrico depende de hover: en pantallas táctiles no se activa
+   para evitar que quede "pegado" después de tocar el botón. */
+@media (hover: none) {
+  .btn-electric::before,
+  .btn-electric::after,
+  .btn-electric-ghost::before,
+  .btn-electric-ghost::after {
+    display: none;
   }
 }
 
@@ -149,6 +202,7 @@
     transparent 80%
   );
   background-size: 200% 100%;
+  background-repeat: no-repeat;
   background-position: -100% 0;
   transition: none;
   pointer-events: none;
@@ -197,6 +251,7 @@
     transparent 80%
   );
   background-size: 200% 100%;
+  background-repeat: no-repeat;
   background-position: -100% 0;
   pointer-events: none;
   border-radius: inherit;

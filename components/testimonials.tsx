@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card"
 import { Star, Quote } from "lucide-react"
 
 const testimonials = [
@@ -54,56 +53,63 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonios" className="py-24 bg-slate-900">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="testimonios" className="py-16 sm:py-24 bg-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
             Lo que dicen nuestros egresados
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto text-pretty">
             Historias reales de personas que transformaron su carrera con Academia Solar.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700 backdrop-blur">
-              <CardContent className="p-6">
-                <Quote className="h-8 w-8 text-amber-500/30 mb-4" />
-                <p className="text-slate-300 mb-6 leading-relaxed">
-                  {`"${testimonial.text}"`}
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-green-500 flex items-center justify-center text-white font-bold">
-                    {testimonial.image}
-                  </div>
-                  <div className="flex-1">
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-slate-400">{testimonial.role}</p>
-                    <p className="text-xs text-slate-500">{testimonial.location}</p>
-                  </div>
-                  <div className="flex gap-0.5">
+        {/* En telefonos: carrusel deslizable; en pantallas grandes: grilla */}
+        <div className="-mx-4 sm:mx-0">
+          <div className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-4 px-4 pb-2 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 lg:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <figure
+                key={testimonial.name}
+                className="flex w-[85%] flex-shrink-0 snap-start flex-col rounded-2xl border border-slate-700 bg-slate-800/50 p-6 sm:w-auto"
+              >
+                <div className="mb-4 flex items-center justify-between">
+                  <Quote className="h-8 w-8 text-amber-500/30" />
+                  <div className="flex gap-0.5" aria-label={`${testimonial.rating} de 5 estrellas`}>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+                <blockquote className="mb-6 flex-1 leading-relaxed text-slate-300">
+                  {`"${testimonial.text}"`}
+                </blockquote>
+                <figcaption className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-green-500 font-bold text-white">
+                    {testimonial.image}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-slate-400">
+                      {testimonial.role} · {testimonial.location}
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
+        <p className="mt-3 text-center text-xs text-slate-500 sm:hidden">Desliza para ver mas →</p>
 
         {/* Stats Bar - SIN alumnos proyectados 18M ni NPS objetivo */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-slate-700">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 pt-8 sm:py-8 border-t border-slate-700">
           {[
             { value: "500+", label: "Egresados" },
             { value: "95%", label: "Tasa de Empleo" },
             { value: "4.9/5", label: "Satisfaccion" },
             { value: "50+", label: "Empresas Aliadas" },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-green-400">
                 {stat.value}
               </p>

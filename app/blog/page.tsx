@@ -52,20 +52,20 @@ export default async function BlogPage() {
   }
 
   return (
-    <div className="pb-24">
+    <div className="pb-16 sm:pb-24">
       <JsonLd data={jsonLd} />
 
       {/* Hero */}
-      <section className="bg-foreground text-background py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="flex items-center gap-2 text-background/60 text-sm font-medium mb-4">
+      <section className="bg-slate-900 text-white py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-2 text-amber-400 text-sm font-medium mb-4">
             <BookOpen className="w-4 h-4" />
             Blog Academia Solar
           </div>
           <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-balance">
             Guias y noticias de energia solar en Argentina
           </h1>
-          <p className="text-background/70 text-lg max-w-2xl text-pretty">
+          <p className="text-white/70 text-base sm:text-lg max-w-2xl text-pretty">
             Precios actualizados, comparativas de equipos y casos reales de instalaciones para
             tomar mejores decisiones sobre energia solar.
           </p>
@@ -73,17 +73,25 @@ export default async function BlogPage() {
       </section>
 
       {/* Grid de posts */}
-      <section className="mx-auto max-w-7xl px-4 lg:px-8 py-16">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
         {posts.length === 0 ? (
           <p className="text-center text-muted-foreground py-12">
             Todavia no hay articulos publicados. Vuelve pronto.
           </p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <Link key={post.id} href={`/blog/${post.slug}`} className="group">
-                <Card className="h-full overflow-hidden pt-0 transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
-                  <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {posts.map((post, index) => (
+              <Link
+                key={post.id}
+                href={`/blog/${post.slug}`}
+                className={`group ${index === 0 ? "md:col-span-2 lg:col-span-3" : ""}`}
+              >
+                <Card
+                  className={`h-full overflow-hidden pt-0 gap-0 transition-all duration-200 hover:shadow-lg hover:-translate-y-1 ${
+                    index === 0 ? "lg:grid lg:grid-cols-2 lg:pb-0" : ""
+                  }`}
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-muted lg:h-full">
                     {post.imagen_destacada_url && (
                       <Image
                         src={post.imagen_destacada_url}
@@ -91,16 +99,21 @@ export default async function BlogPage() {
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={index === 0}
                       />
                     )}
                   </div>
-                  <CardContent className="flex flex-col gap-3">
+                  <CardContent className={`flex flex-col gap-3 pt-5 ${index === 0 ? "lg:p-10 lg:justify-center" : ""}`}>
                     {post.categoria && (
                       <Badge variant="secondary" className="w-fit">
                         {post.categoria}
                       </Badge>
                     )}
-                    <h2 className="font-heading text-lg font-semibold leading-snug text-balance group-hover:text-primary transition-colors">
+                    <h2
+                      className={`font-heading font-semibold leading-snug text-balance group-hover:text-amber-600 transition-colors ${
+                        index === 0 ? "text-xl sm:text-2xl lg:text-3xl" : "text-lg"
+                      }`}
+                    >
                       {post.titulo}
                     </h2>
                     {post.resumen && (
@@ -126,8 +139,8 @@ export default async function BlogPage() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="rounded-2xl bg-muted/50 border border-border px-6 py-10 lg:px-12 lg:py-14 text-center">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-gradient-to-br from-amber-50 to-green-50 border border-amber-200/60 px-5 py-10 sm:px-6 lg:px-12 lg:py-14 text-center">
           <h2 className="font-heading text-2xl lg:text-3xl font-bold mb-3 text-balance">
             Queres pasar de leer a instalar?
           </h2>
@@ -137,7 +150,7 @@ export default async function BlogPage() {
           </p>
           <Button
             asChild
-            className="btn-electric bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40"
+            className="btn-electric h-12 w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-amber-400/40"
           >
             <Link href="/cursos/introduccion">
               Empezar Gratis

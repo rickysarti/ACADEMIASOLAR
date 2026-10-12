@@ -34,16 +34,16 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-muted/50 border-t border-border">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-28 lg:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/images/academia-solar-logo.png"
+                src="/images/academia-solar-logo-sm.png"
                 alt="Academia Solar"
-                width={140}
-                height={45}
+                width={439}
+                height={160}
                 className="h-10 w-auto"
               />
             </Link>
@@ -65,13 +65,13 @@ export function Footer() {
 
           {/* Links columns */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Programas</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-foreground mb-3">Programas</h4>
+            <ul className="space-y-1">
               {footerLinks.programas.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-block py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -81,15 +81,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Empresa</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-foreground mb-3">Empresa</h4>
+            <ul className="space-y-1">
               {footerLinks.empresa.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-block py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -99,15 +99,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Recursos</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-foreground mb-3">Recursos</h4>
+            <ul className="space-y-1">
               {footerLinks.recursos.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-block py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -117,15 +117,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Soluciones</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-foreground mb-3">Soluciones</h4>
+            <ul className="space-y-1">
               {footerLinks.soluciones.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-block py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -137,13 +137,13 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <p className="text-sm text-muted-foreground">
               &copy; {new Date().getFullYear()} Academia Solar - SolarPower Argentina. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-6">
               <Link
-                href="https://www.solarpower.com.ar"
+                href="https://www.solarpower.com.ar/privacidad"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"

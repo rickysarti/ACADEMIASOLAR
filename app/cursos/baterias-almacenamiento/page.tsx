@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function BateriasAlmacenamientoPage() {
   return (
     <CoursePage
+      slug="baterias-almacenamiento"
       title="Baterias y Almacenamiento Solar"
       subtitle="Especializacion en sistemas con almacenamiento"
       description="Todo sobre baterias de litio, AGM y flujo para sistemas solares residenciales y comerciales. Incluye configuracion de inversores hibridos Deye."

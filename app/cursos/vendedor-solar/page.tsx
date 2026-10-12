@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function VendedorSolarPage() {
   return (
     <CoursePage
+      slug="vendedor-solar"
       title="Vendedor Solar Experto"
       subtitle="El mejor vendedor de energia solar de Argentina"
       description="Convertite en el mejor vendedor de energia solar. Tecnicas de venta especificas para el sector y acceso al pipeline real de SolarPower desde el primer mes."

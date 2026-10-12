@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function InstaladorSolarPage() {
   return (
     <CoursePage
+      slug="instalador-solar"
       title="Instalador Solar Certificado"
       subtitle="El programa mas completo del mercado argentino"
       description="Convertite en instalador solar profesional con practicas en instalaciones reales de SolarPower. Sali con experiencia en obra real y acceso directo a la red de instaladores mas grande de Argentina."

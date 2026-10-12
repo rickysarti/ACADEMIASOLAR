@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function IntroduccionPage() {
   return (
     <CoursePage
+      slug="introduccion"
       title="Introduccion a la Energia Solar"
       subtitle="Tu primer paso hacia una carrera solar"
       description="Empieza desde cero y entende como funciona la energia solar en Argentina. Curso gratuito y completo para todos."

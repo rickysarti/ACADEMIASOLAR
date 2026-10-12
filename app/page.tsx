@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/testimonials"
 import { FAQ } from "@/components/faq"
 import { CTA } from "@/components/cta"
 import { Footer } from "@/components/footer"
+import { MobileCtaBar } from "@/components/mobile-cta-bar"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <FAQ />
       <CTA />
       <Footer />
+      <MobileCtaBar />
     </main>
   )
 }

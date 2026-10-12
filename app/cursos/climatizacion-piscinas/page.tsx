@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 export default function ClimatizacionPiscinasPage() {
   return (
     <CoursePage
+      slug="climatizacion-piscinas"
       title="Climatizacion Solar para Piscinas"
       subtitle="Un nicho en crecimiento con excelente rentabilidad"
       description="Disena e instala sistemas de calefaccion solar para piscinas residenciales y comerciales. Un nicho de alto valor con excelente retorno de inversion."

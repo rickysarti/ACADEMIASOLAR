@@ -1,3 +1,6 @@
+import Link from "next/link"
+import { whatsappUrl } from "@/lib/site"
+import { JsonLd } from "@/components/json-ld"
 import { Badge } from "@/components/ui/badge"
 import {
   Accordion,
@@ -52,11 +55,22 @@ const faqs = [
 export function FAQ() {
   return (
     <section id="faq" className="py-16 lg:py-24">
-      <div className="mx-auto max-w-4xl px-4 lg:px-8">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          })),
+        }}
+      />
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <Badge variant="secondary" className="mb-4">Preguntas Frecuentes</Badge>
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
             Resolvemos tus dudas
           </h2>
           <p className="text-lg text-muted-foreground text-pretty">
@@ -65,18 +79,30 @@ export function FAQ() {
         </div>
 
         {/* FAQ Accordion */}
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full rounded-2xl border border-border bg-card px-4 sm:px-6">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left text-foreground hover:text-primary">
+              <AccordionTrigger className="py-5 text-left text-base font-semibold text-foreground hover:text-primary hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
+              <AccordionContent className="text-base text-muted-foreground leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
+
+        <p className="mt-8 text-center text-muted-foreground">
+          Tenes otra pregunta?{" "}
+          <Link
+            href={whatsappUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-green-700 underline underline-offset-4 hover:text-green-800"
+          >
+            Escribinos por WhatsApp
+          </Link>
+        </p>
       </div>
     </section>
   )
