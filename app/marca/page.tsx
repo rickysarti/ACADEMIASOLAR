@@ -42,6 +42,7 @@ const downloads = [
   { label: "Logo para fondo claro (PNG)", href: "/brand/academia-solar-logo.png" },
   { label: "Logo para fondo oscuro (PNG)", href: "/brand/academia-solar-logo-blanco.png" },
   { label: "Isotipo (SVG)", href: "/brand/academia-solar-isotipo.svg" },
+  { label: "Fuente Academia Solar Sans (ZIP)", href: "/brand/academia-solar-sans.zip" },
 ]
 
 export default function MarcaPage() {
@@ -138,7 +139,7 @@ export default function MarcaPage() {
         {/* Tipografía */}
         <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
           <Eyebrow>Tipografía</Eyebrow>
-          <h2 className="mt-3 text-3xl font-bold text-ink-950 sm:text-4xl">Dos familias, roles claros</h2>
+          <h2 className="mt-3 text-3xl font-bold text-ink-950 sm:text-4xl">Una display con carácter y una fuente propia</h2>
           <div className="mt-10 grid gap-4 lg:grid-cols-2">
             <div className="rounded-3xl bg-white p-7 ring-1 ring-ink-950/8">
               <p className="text-sm font-semibold text-sol-700">Títulos y logo</p>
@@ -146,10 +147,30 @@ export default function MarcaPage() {
               <p className="mt-4 font-display text-2xl text-ink-700">Aa Bb Cc 0123 — Aprendé en el techo.</p>
             </div>
             <div className="rounded-3xl bg-white p-7 ring-1 ring-ink-950/8">
-              <p className="text-sm font-semibold text-sol-700">Textos e interfaz</p>
-              <p className="mt-3 text-5xl font-semibold tracking-tight text-ink-950">Inter</p>
+              <p className="text-sm font-semibold text-sol-700">Textos e interfaz · fuente propia</p>
+              <p className="mt-3 text-5xl font-semibold tracking-tight text-ink-950">Academia Solar Sans</p>
               <p className="mt-4 text-lg text-ink-700">
-                Legible en pantallas chicas, ideal para párrafos, botones y formularios.
+                Nuestra tipografía para párrafos, botones y formularios. Sus puntos son soles: la i, la j y toda la
+                puntuación llevan el mismo círculo que corona el isotipo.
+              </p>
+            </div>
+          </div>
+          <div className="mt-4 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+            <div className="flex flex-wrap items-baseline justify-center gap-x-6 rounded-3xl bg-ink-950 px-6 py-10 text-white">
+              <span className="text-7xl font-bold sm:text-8xl">¡i</span>
+              <span className="text-7xl font-bold text-sol-400 sm:text-8xl">j?</span>
+              <span className="text-7xl font-bold sm:text-8xl">ü:</span>
+            </div>
+            <div className="rounded-3xl bg-white p-7 ring-1 ring-ink-950/8">
+              <p className="font-display text-lg font-bold text-ink-950">Pesos disponibles</p>
+              <ul className="mt-3 space-y-1.5 text-lg text-ink-800">
+                <li className="font-normal">Regular 400 — <span className="italic">e itálica</span></li>
+                <li className="font-medium">Medium 500</li>
+                <li className="font-semibold">SemiBold 600</li>
+                <li className="font-bold">Bold 700</li>
+              </ul>
+              <p className="mt-4 text-sm text-ink-500">
+                Derivada de Hanken Grotesk bajo licencia SIL Open Font License 1.1.
               </p>
             </div>
           </div>

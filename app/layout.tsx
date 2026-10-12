@@ -1,13 +1,24 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Bricolage_Grotesque } from 'next/font/google'
+import { Bricolage_Grotesque } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import { JsonLd } from '@/components/json-ld'
 import { CONTACT_EMAIL, SITE_URL } from '@/lib/site'
 import './globals.css'
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
+// Academia Solar Sans: fuente propia de la academia (derivada de Hanken Grotesk,
+// SIL OFL 1.1) con los puntos redibujados como soles. Ver app/fonts/OFL.txt
+// y tools/build_font.py para regenerarla.
+const solarSans = localFont({
+  src: [
+    { path: './fonts/academia-solar-sans-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/academia-solar-sans-400-italic.woff2', weight: '400', style: 'italic' },
+    { path: './fonts/academia-solar-sans-500-normal.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/academia-solar-sans-600-normal.woff2', weight: '600', style: 'normal' },
+    { path: './fonts/academia-solar-sans-700-normal.woff2', weight: '700', style: 'normal' },
+  ],
+  variable: '--font-solar-sans',
+  display: 'swap',
 })
 
 const display = Bricolage_Grotesque({
@@ -83,7 +94,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-AR">
-      <body className={`${inter.variable} ${display.variable} font-sans antialiased`}>
+      <body className={`${solarSans.variable} ${display.variable} font-sans antialiased`}>
         <JsonLd data={organizationJsonLd} />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
